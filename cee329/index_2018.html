@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116939508-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116939508-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CEE329: AI in Construction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/logos/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/logos/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/logos/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/logos/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/logos/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/logos/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/logos/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/logos/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logos/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/logos/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logos/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/logos/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logos/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/brain.png" alt="" style="height:40px;padding-right:10px">AI in Construction</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#description">Description</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#instructors">Instructors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#assignments">Assignments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#syllabus">Detailed Syllabus</a>
+            </li>
+	    <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html">2019 Class</a>
+            </li>
+          </ul>
+        </div>
+        <img src="img/logos/stanford2.png" alt="" style="height:30px;padding-left:10px"> 
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">CEE329/CEE329S, Wednesdays 4.30 - 5.50PM, @Y2E2 292A </div>
+          <div class="intro-heading text-uppercase">Artificial Intelligence<br>Applications<br>in the AEC Industry (2018)</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="description">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Course Description</h2>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-12 text-center">
+            <p>There’s been a great buzz around <b>Artificial Intelligence (AI)</b> the past couple of years that penetrated numerous domains. <b>Construction</b> couldn’t stay unaffected; the need to increase efficiency and decrease risk in this trillion-dollar industry is perceived as a good fit for AI-based solutions. Inspired by recent advances in <i>Machine Learning</i>, <i>Computer Vision</i>, <i>Natural Language Processing</i> and other fields, academic and industrial organizations are looking into AI-fying processes such as design optimization, scheduling, documentation, safety and construction project monitoring. However, as with every new trend, there exists misconception around abilities, usage and limitations. <i>AI technology can without doubt empower several processes in the Construction domain; what it can’t do is perform magic</i>.</p>
+            <p>In this course we will explore these processes and corresponding AI directions in both academia and industry. Through weekly lectures given by prominent researchers, practicing professionals, and entrepreneurs we will critically examine these directions to gain an understanding of how AI can be used to provide solutions in the AEC industry and assess the technology, feasibility and effort. Students will participate actively in discussions, submit triweekly reflection writings and present their own evaluation of existing solutions. We encourage students of all backgrounds to enroll (no AI/Construction background necessary). <b>Artificial Intelligence Applications in the AEC Industry (CEE329)</b> is offered as a 2-unit course for up to 12 graduate students.</p>
+             <p><b>CEE329S</b> is a 1-unit seminar, which requires attendance at all lecture and active preparation of and participation in the discussions.</p>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading" style="padding-bottom:10px">Course Objectives</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-12 text-center">
+            <p>Through this course, students will:</p>
+            <p>
+              <u>Build knowledge</u> on the potential of using AI to empower construction.<br>
+              <u>Develop critical thinking</u> to evaluate current AI in construction technologies.<br>
+              <u>Identify issues</u> in construction that can hinder the development of impactful solutions.<br>
+              <u>Acquire contacts</u> that can be useful in their academic or industrial aspirations.<br>
+              Get <u>inspired</u>.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Team -->
+    <section style="background-color:#f2f1eb" id="instructors">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Instructors</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/people/armeni.jpg" alt="iro_armeni">
+              <h4><a href="https://cs.stanford.edu/~iarmeni/" style="color:#2e2d29">Iro Armeni</a></h4>
+              <p class="text-muted">PhD candidate</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/people/fischer.jpg" alt="martin_fischer">
+              <h4><a href="https://web.stanford.edu/~fischer/"  style="color:#2e2d29">Martin Fischer</a></h4>
+              <p class="text-muted">Professor, CEE</p>
+            </div>
+          </div>
+          <div class="col-sm-2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="schedule">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Course Schedule</h2>
+          </div>
+          <div class="col-lg-12 text-center">
+            <p style="color:#928b81;padding-bottom:30px">Subscribe to the class <a href="https://calendar.google.com/calendar?cid=dGMwNDA4MHNrZWIxaDJiajFuZmVtbzJvdmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="color:#000;padding-bottom:30px"><b>We are offering an info session on <span style="text-decoration:underline">Friday April 6th, 10.30 - 11.30AM @Y2E2 Room 292A</span>. See you all there!<b></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/intro.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>April 11th</h4>
+                    <h4 class="subheading" style="color:#928b81">Introduction</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	This session is an introduction to the class. The speakers will offer their perspective on AI from the theoretical and technological perspective and set the pace for the rest of the discussions.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#intro">here</a></i>.
+                  </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/design_optim.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>April 18th</h4>
+                    <h4 class="subheading" style="color:#928b81">Design Optimization</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	In this class we will discuss design optimization.<br>
+                        <i>For more details click <a class="portfolio-link" data-toggle="modal" href="#design-opt">here</a></i>.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/constr_schedule.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>April 25th</h4>
+                    <h4 class="subheading" style="color:#928b81">Construction Scheduling</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	This class focuses on construction scheduling.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#constr-schedule">here</a></i>.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/constr_productivity.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>May 2nd</h4>
+                    <h4 class="subheading" style="color:#928b81">Construction Productivity</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	In this class we will discuss productivity in construction sites.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#productiv">here</a></i>.<br><br>
+                    	<u>Reflection Writing due</u>
+                    </p>
+                  </div>
+                </div>
+              </li>  
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/robotics.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>May 9th</h4>
+                    <h4 class="subheading" style="color:#928b81">Robotics</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	In this class we will focus on robotics in the AEC industry and specifically on doing work that is difficult for humans to do.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#robot">here</a></i>.<br><br>
+			<u>Final Project Update Due</u>
+                     </p>
+                  </div>
+                </div>
+              </li>
+              <li  class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/oper_sb.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>May 16th</h4>
+                    <h4 class="subheading" style="color:#928b81">Smart Buildings, Comfort</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	This session is on smart buildings with a focus on comfort.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#build-comfort">here</a></i>.<br><br>
+                    	<u>Reflection Writing due</u>
+                     </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/constr_documentation.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>May 23rd</h4>
+                    <h4 class="subheading" style="color:#928b81">Construction Documentation</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	The focus is on construction documentation and feedback loops.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#document">here</a></i>.
+                     </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/oper_sb.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>May 30th</h4>
+                    <h4 class="subheading" style="color:#928b81">Smart Buildings, Energy</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">
+                    	The focus of this session is on energy.<br>
+                    	<i>For more details click <a class="portfolio-link" data-toggle="modal" href="#build-energy">here</a></i>.<br><br>
+                      	<u>Reflection Writing due</u>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/schedule/conclusion.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>June 6th</h4>
+                    <h4 class="subheading" style="color:#928b81">Final Presentations & Closing notes</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p style="color:#000;font-weight:normal">In this class the students enrolled in CEE329 will present their team projects. Discussion and Closing Notes will follow the presentations.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading" style="padding-top:30px">Speaker List</h3>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-lg-12 text-center">
+        	<h5 style="padding-top:30px">Introduction</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="https://web.stanford.edu/~fischer/">Martin Fischer</a>, <i>Professor, CIFE, Civil and Environmental Engineering, Stanford University</i><br>
+              <u>On AI:</u>  <a href="https://cs.stanford.edu/~iarmeni/">Iro Armeni</a>, <i>PhD Candidate, CIFE/AI Lab, Stanford University</i><br>
+            </p>
+
+            <h5 style="padding-top:30px">Design Optimization</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Glenn Katz</a>, <i>Lecturer, Civil and Environmental Engineering, Stanford University</i><br>
+              <u>On AI:</u>  <a href="https://www.linkedin.com/in/filippo-ranalli-a70a3087/">Filippo Ranalli</a>, <i>PhD Candidate, CIFE, Stanford University</i><br>
+            </p>
+
+            <h5 style="padding-top:30px">Construction Scheduling</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Kevin Britt</a>, <i>Planning, Scheduling and Production Planning, DPR</i><br>
+              <u>On AI:</u> <a href="">Henning Roedel</a>, <i>ALICE Technologies</i><br>
+            </p>
+            <h5 style="padding-top:30px">Construction Documentation</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Mark LaBell Jr</a>, <i>SR VDC Technical Leader, SSOE</i><br>
+              <u>On AI:</u>  <a href="http://cvgl.stanford.edu/silvio/">Silvio Savarese</a>, <i>Professor, AI Lab, Stanford University</i><br>
+            </p>
+            <h5 style="padding-top:30px">Construction Productivity</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Roberto Charron</a>, <i>Practice Expert on IPD and Lean Construction, McKinsey & Company</i><br>
+              <u>On AI:</u>  <a href="">Robin Singh</a>, <i>CTO - Cofounder, Doxel</i><br>
+            </p>
+            <h5 style="padding-top:30px">Robotics</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Atul Khanzode</a>, <i>Director for Technology and Innovation, DPR</i><br>
+              <u>On AI:</u>  <a href="https://cs.stanford.edu/groups/manips/ok.html">Oussama Khatib</a>, <i>Professor, AI Lab, Stanford University</i><br>
+            </p>
+            <h5 style="padding-top:30px">Smart Buildings, Comfort</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Din Catic</a>, <i>Business Development team, Global Centre of Competence for Cities, Siemens Corporation, London, UK</i><br>
+              <u>On AI:</u>  <a href="http://pbl.stanford.edu/fruchter_bio.htm">Renate Fruchter</a>, <i>Director of PBL, Civil and Environmental Eng. Dept., Stanford University</i><br>
+            </p>
+            <h5 style="padding-top:30px">Smart Buildings, Energy</h5>
+            <p style="font-weight:normal">
+              <u>On AEC:</u> <a href="">Gerry Hamilton</a>, <i>Associate Director, Facilities Energy Management, Stanford University</i> <i></i><br>
+              <u>On AI:</u>  <a href="https://web.stanford.edu/~ramr/">Ram Rajagopal</a>, <i>Associate Professor, Civil & Env. Eng., Stanford University</i><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Course Assignments -->
+    <section  style="background-color:#f2f1eb"  id="assignments">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Course Assignments</h2>
+          </div>
+        </div>
+        <h3 class="section-heading text-uppercase text-center">CEE329</h3>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-weight:normal">Students will be evaluated based on the following assignments. Late assignments will be marked down 25% per day late, with zero credit if more than two days late. All assignments are required to be submitted except if prior arrangement with the instructors.</p>
+            <ul style="font-weight:normal">
+              <li><b>Participation: 30% of grade.</b> Students will be evaluated based on their class participation.</li>
+              <li><b>Preparation: 10% of grade.</b> Students will submit every week prior to the beginning of the class at least one, but not more than three questions related to that week’s topic. These questions (or a subset of them) will be asked to the presenters. This assignment is due at 5PM the day before the class (Tuesdays).</li>
+              <li><b>Reflection Writing: 30% of grade.</b> Students will submit reflection writings on a triweekly basis on the covered material. The submission should not exceed one page. Font size: 11pt, Line Spacing: 1.1, Format:.doc, .docx, or .pdf. The assignment is performed on an individual basis and is due an hour before the start of the class. </li>
+              <li><b>Final Presentation: 30% of grade.</b> Students will choose an existing AI in Construction technology to evaluate. They will present in class the problem it addresses, the core technology, the impact and feasibility. This assignment is be performed in groups of 2 and is due an hour before the start of the class. Each team will have 10 mins to present and 3 mins for Q/A. All presentations will include visual aids. Team members should submit on an individual basis a PDF of the group's slides.</li>
+            </ul>
+          </div>
+        </div>
+        <h3 class="section-heading text-uppercase text-center" style="padding-top:30px">CEE329S</h3>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-weight:normal">Students will be evaluated based on the following criteria.</p>
+            <ul style="font-weight:normal">
+              <li><b>Participation: </b> Students will be evaluated based on their class participation.</li>
+              <li><b>Preparation: </b> Students will submit every week prior to the beginning of the class at least one, but not more than three questions related to that week’s topic. These questions (or a subset of them) will be asked to the presenters. This assignment is due at 5PM the day before the class (Tuesdays).</li>
+            </ul>
+          </div>
+        </div>
+	</div>
+    </section>
+
+
+    <!-- Detailed Syllabus -->
+     <section id="syllabus">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Course Logistics</h2>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">General Information</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-weight:normal">
+              <b>Units:</b> 2 (CEE329), 1 (CEE329S)<br>
+              <b>Grading Criteria:</b> Letter Grade (CEE329), Pass/No Credit (CEE329S)<br>
+              <b>Enrollment Cap:</b> 12 students (CEE329), unlimited (CEE329S)<br>
+              <b>Readings:</b> There are no textbooks required. Any readings will be posted on the course website.<br>
+            </p>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Ofcice hours</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-weight:normal">
+              <b>Martin Fischer</b>, Y2E2 297, By appointment<br>
+              <b>Iro Armeni</b>, Gates 259, Mondays, 3-4PM<br>
+            </p>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Attendance Policy</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <p style="font-weight:normal">Attendance is required at all sessions unless there is an excused absence, which requires prior notification and approval from the instructor. Students are not allowed to miss more than one sessions. Regardless of any missed sessions, students are required to submit coursework on time.</p>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Regrading Policy</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <p style="font-weight:normal">Students may submit a regrade request within 3 days after the grades are released, if they think they deserved a better grade on an assignment. The request should briefly summarize why the student think the original grade was unfair. We will reevaluate your assignment as soon as possible, and issue a decision.</p>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Students with Disabilities</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <p style="font-weight:normal">Students who may need an academic accommodation based on the impact of a disability must initiate the request with the Office of Accessible Education (OAE). Professional staff will evaluate the request with required documentation, recommend reasonable accommodations, and prepare an Accommodation Letter for faculty dated in the current quarter in which the request is being made. Students should contact the OAE as soon as possible since timely notice is needed to coordinate accommodations. The OAE is located at 563 Salvatierra Walk (phone: 723-1066, URL: <a href="http://studentaffairs.stanford.edu/oae">http://studentaffairs.stanford.edu/oae</a>).</p>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Academic Integrity</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <p style="font-weight:normal">Students are expected to adhere to Stanford’s Honor Code and are responsible for understanding the University rules regarding academic integrity. In brief, conduct prohibited by the Honor Code includes all forms of academic dishonesty, among them copying from another’s exam, unpermitted collaboration, and representing another’s work as one’s own. To view the honor code and receive tips for how to adhere to it, visit: <a href="http://studentaffairs.stanford.edu/communitystandards">http://studentaffairs.stanford.edu/communitystandards</a></p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer  style="background-color:#f2f1eb">
+      <div class="container" >
+        <div class="row">
+          <div class="col-md-3">
+            <span class="copyright"><i>AI in Construction, 2018</i></span>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li class="list-inline-item">
+                <a href="https://cee.stanford.edu">
+                  <img src="img/logos/cee.png" alt="" style="height:50px">
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://cife.stanford.edu">
+                  <img src="img/logos/cife2.png" alt="" style="height:50px">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!--Intro -->
+    <div class="portfolio-modal modal fade" id="intro" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Introduction</h2>
+                  <p class="item-intro text-muted">
+                  	This session is an introduction to the class. The speakers will offer their perspective on AI from the theoretical and technological perspective and set the pace for the rest of the discussions.</p>
+                <ul>
+                    <u>Speakers:</u>
+                  	<li><u>On AEC:</u> <a href="https://web.stanford.edu/~fischer/">Martin Fischer</a>, <i>Professor, CIFE, Civil and Environmental Engineering, Stanford University</i></li>
+              		<li><u>On AI:</u>  <a href="https://cs.stanford.edu/~iarmeni/">Iro Armeni</a>, <i>PhD Candidate, CIFE/AI Lab, Stanford University</i></li>
+              	</ul>
+                </p>
+                 <ul class="list-inline">
+                    <li>Date: April 11th 2018</li>
+                    <li>Location: Y2E2, Room 292A</li>
+                 </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Design Optimization -->
+    <div class="portfolio-modal modal fade" id="design-opt" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Design Optimization</h2>
+                  <p class="item-intro text-muted">
+                  	This session dives into the first AEC topic on Design Optimization. <br>We are very excited to have <b><i>Glenn Katz</i></b> and <b><i>Filippo Rannali</i></b> join us to present their perspectives of AI technology from the industry and technology side respectively. Following their presentations, we will have a Q&A session to foster further discussion on this topic and tie back industry and technology. Below you can find the bios of the speakers and a short description of their talk.</p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Glenn Katz</a>, <i>Lecturer, Civil and Environmental Engineering, Stanford University</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="https://www.linkedin.com/in/filippo-ranalli-a70a3087/">Filippo Ranalli</a>, <i>PhD Candidate, CIFE, Stanford University</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>Parametric Design in AEC — A Business Perspective</u><br>
+	              		<b><i>Glenn</i></b> will present a framework for understanding the evolution of applications of parametric design technology in the AEC industry, focusing on the factors that drive adoption and technology innovation from a business perspective.  He will share examples of how parametric modeling and rule-based systems are being used today as a foundation for interactive design assistance, design verification, and design optimization, then look ahead to how emerging applications of generative design and new models for human computer interaction can deliver AEC business advantages.<br><br>
+	              		<u>The Frontier of Structural Optimization and the Prospects of AI</u><br>
+	              		<b><i>Filippo</i></b> will present his research on automating and optimizing the sizing and layout of steel structures for cost, while satisfying all the specified project requirements on strength, stiffness and buildability. He will follow with a description of which AI algorithms are relevant to structural design optimization, and in what ways they can be deployed.
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Glenn Katz</i></b>  is an educator at Stanford University, focussing on courses integrating BIM, systems integration, parametric design optimization, and sustainable design principles, as well as leading the building design team at Bearington Studios — a design firm in San Jose, CA.  Glenn has over 35 years of industry experience working at the intersection of AEC, education, and technology. He created the Autodesk BIM Curriculum for AEC and publishes extensively through his educational website at www.bimtopia.com and his YouTube channel – BIMtopia – which has over 9000 subscribers and 1.7 million views. Glenn graduated from MIT, where he focused on architecture and structural engineering, then completed the M.S. degree program in construction management at Stanford University.<br><br>
+	              		<b><i>Filippo Rannali</i></b> is originally from Italy, where he obtained his BS in Civil Engineering. He came to Stanford as a Structural MS student, and he is currently pursuing a PhD with Martin Fischer in automating and optimizing the design of large-scale steel structures for industry applications. His research interests include applying modern AI methods to the optimization and scheduling of structures to generate a feedback process that evaluates several design scenarios for each project..
+	              	</p>
+	                 <ul class="list-inline">
+	                    <li>Date: April 18th 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Construction Scheduling -->
+    <div class="portfolio-modal modal fade" id="constr-schedule" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Construction Scheduling</h2>
+                  <p class="item-intro text-muted">
+                  	This <i>Wednesday (5/2)</i> we will proceed to our next AEC topic on <b>Construction Scheduling</b>. We are very excited to have <b><i>Kevin Britt</i></b> and <b><i>Henning Roedel</i></b> join us to present their perspectives of AI technology from the industry and technology side respectively. As always, following their presentations, we will have a Q&A session to foster further discussion on this topic and tie back industry and technology. Below you can find the bios of the speakers and a short description of their talk.
+                  </p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Kevin Britt</a>, <i>Planning, Scheduling and Production Planning, DPR</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="">Henning Roedel</a>, <i>ALICE Technologies</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>Project Lifecycle Scheduling - Challenges & Successes</u><br>
+	              		<b><i>Kevin</i></b> will be discussing challenges and successes of project lifecycle Scheduling through 7 key principals of PSPP at DPR. He has learned that a successful scheduling system relies on a planning first approach, with teams working collaboratively to develop, align and execute a plan that they trust and believe is achievable. While CPM Schedules are the company standard for all projects, Kevin believes social planning efforts and scientific, model-based scheduling has a higher probability of successful outcomes on projects.<br><br>
+	              		<u>Extending construction scheduling modeling approaches with AI</u><br>
+	              		<b><i>Henning</i></b> will discuss advances on using AI technologies for this task, including feasibility, effort and challenges. Current construction scheduling technology relies on a single method to model constraints: precedence. The use of precedence has enabled the calculation of critical paths within schedules, e.g. the identification of tasks for which a change in duration would lead to the overall change in schedule duration. A new AI scheduling algorithm has extended constraint modeling to include resource pools, allowing for more advanced constraint modeling as well as the ability to search the construction schedule state space. This talk will briefly discuss these topics and pose a challenge to students on how technology can be better used to identify critical paths and driving constraints.
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Kevin Britt</i></b> is the National leader of Planning, Scheduling and Production Planning (PSPP) at DPR Construction. Kevin’s passion is continuously finding ways to improve PSPP at DPR and believes the best system is the right balance of People, Process and Tools. In 2000, he received a BS in Construction Management from the University of Cincinnati at Cincinnati, Ohio.<br><br>
+	              		<b><i>Henning Roedel</i></b> recently received his doctorate in Civil and Environmental Engineering at Stanford University in partnership with NASA Ames Research Center, wherein he led the characterization of protein-bound concretes for structural applications both on- and off-Earth. Prior to becoming a materials scientist, Henning received his MS at Stanford University in Construction Management with an emphasis in Virtual Design and Construction. He received a BS in Civil and Environmental Engineering from the University of California at Los Angeles, focusing on structural engineering and hydrology.
+	              	</p>
+	                 <ul class="list-inline">
+	                    <li>Date: April 25th 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Construction Productivity -->
+    <div class="portfolio-modal modal fade" id="productiv" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Construction Productivity</h2>
+                  <p class="item-intro text-muted">
+                  	This <i>Wednesday (5/2)</i> we will proceed to our next AEC topic on <b>Construction Productivity</b>. We are very excited to have <b><i>Roberto Charron</i></b> and <b><i>Robin Singh</i></b> join us to present their perspectives of AI technology from the industry and technology side respectively. As always, following their presentations, we will have a Q&A session to foster further discussion on this topic and tie back industry and technology. Below you can find the bios of the speakers and a short description of their talk.
+                  </p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Roberto Charron</a>, <i>Practice Expert on IPD and Lean Construction, McKinsey & Company</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="">Robin Singh</a>, <i>CTO - Cofounder, Doxel</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>Reinventing construction: a route to higher productivity - <i>Roberto Charron</i></u><br>
+	              		The construction sector is one of the largest in the world economy, with about $10 trillion spent on construction-related goods and services every year. However, the industry’s productivity has trailed that of other sectors for decades, and there is a $1.6 trillion opportunity to close the gap.<br>
+- Globally, construction sector labor-productivity growth averaged 1 percent a year over the past two decades, compared with 2.8 percent for the total world economy and 3.6 percent for manufacturing. If construction productivity were to catch up with the total economy, the industry’s value added could rise by $1.6 trillion a year.<br>
+- Examples of innovative firms and regions suggest that acting in seven areas simultaneously could boost productivity by 50 to 60 percent. They are: reshape regulation; rewire the contractual framework to reshape industry dynamics; rethink design and engineering processes; improve procurement and supply-chain management; improve on-site execution; infuse digital technology, new materials, and advanced automation; and reskill the workforce.<br>
+- Many barriers to higher productivity and ways of overcoming them have been known for some time, but the industry has been in deadlock. Most individual players lack both the incentives and the scale to change the system. However, there are forces lowering the barriers for change: rising requirements and demand in terms of volume, cost, and quality; larger-scale players and more transparent markets, and disruptive new entrants; more readily available new technologies, materials, and processes; and the increasing cost of labor with partial restrictions on migrant workers.<br><br>
+	              		<u>Boosting Construction Productivity using Artificial Intelligence - <i>Robin Singh</i></u><br>
+	              		In the past decade, construction industry’s productivity growth has been dramatically slower than any other non-farming industry. One of the key reason for stagnant productivity is the lack of standardized process for efficiently managing construction projects and absence of real-time feedback from the construction site. As new construction projects are increasingly complex and time sensitive, it is impossible to keep track of hundreds of objects that are getting installed in the buildings every single day. Due to the lack of transparency on a job site, good and bad behaviors are often overlooked and valuable insights are often forgotten preventing compounding learning over time. Artificial intelligence based tools can have a transformational impact on construction productivity.<br>
+Before AI can be leveraged to boost productivity, the construction site needs to be digitized. Adoption of BIM and smartphones has pushed digitization but capturing field information is still a manual process using laser scanners and cameras. Current processes of manual as-build data acquisition conditions but it involves a laborious and time-intensive process. By the time data- driven insights reach the stakeholder, the insights might be too outdated to have a measurable positive impact on productivity. Drones and self-navigating indoor robots are capable of capturing data more efficiently and accurately. These autonomous systems are digitizing the physical world, opening a window of opportunities for building other AI-powered applications.<br>
+The digital stream of information from a construction site captured by robots and other digital devices can be analyzed using techniques such as NLP and convolution neural networks. Machine learning is a powerful tool that can be used to connect isolated data sources and convert raw construction site information into actionable insights. Using convolutional neural networks, visual systems can be taught to detect various construction components in an image from a construction site. These systems can evaluate accurate percentage progress of different stages of a construction project.<br>
+Artificial intelligence is enabling the digitizing of the physical world and converting data directly into actionable insights. Real-time insights are supercharging project managers, owners and superintendents to resolve issues by reacting in minutes not months.
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Roberto Charron</i></b> is a Capital Projects and Infrastructure Practice Expert leading the NA Project Execution and Lean Construction service line at McKinsey and Co. He has been working with clients helping them transform the way they design, plan and build their capital projects. He also helps clients formulate and implement improvement strategies and design and facilitates training workshops. At this moment Roberto is coaching and mentoring several executives from his clients. Roberto has been an advocate for Lean for over 20 years and has coached project teams throughout the US, South America, Europe, the Middle East and Africa on their Lean Transformations. Previous to joining McKinsey he was the Associate Principal for Corporate Transformation in another consulting firm. He learned the fundamentals of Lean Construction and the Last Planner System (LPS) in 1994 in a $2 billion capital project in Venezuela directly from Greg Howell and Glenn Ballard founders of the Lean Construction Institute (LCI). Roberto has ample experience working and coaching project teams in the design and construction of capital projects.<br><br>
+	              		<b><i>Robin Singh</i></b> is a CTO and co-founder of Doxel, an Andreessen Horowitz backed startup improving construction productivity using 3D computer vision and autonomous rovers. After 5 years of research in autonomous systems, Robin started Doxel to transform how progress is tracked on a construction site. Using a fleet of autonomous robots and 3D neural networks designed to analyze spatial information, Robin is currently leading the development and deployment of technology which is general contractors, subcontractors, and owners to track progress at super human efficiency and accuracy.
+	              	</p>
+	              	
+	                 <ul class="list-inline">
+	                    <li>Date: May 2nd 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robotics -->
+    <div class="portfolio-modal modal fade" id="robot" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Robotics</h2>
+                  <p class="item-intro text-muted">
+                  	This <i>Wednesday (5/9)</i> we will proceed to our next AEC topic on <b>Robotics</b>, and specifically on <i>doing work that is difficult for humans to do</i>. We are very excited to have <b><i>Atul Khanzode</i></b> and <b><i>Oussama Khatib</i></b> join us to present their perspectives of AI technology from the industry and technology side respectively. As always, following their presentations, we will have a Q&A session to foster further discussion on this topic and tie back industry and technology. Below you can find the bios of the speakers and a short description of their talk.
+                  </p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Atul Khanzode</a>, <i>Director for Technology and Innovation, DPR</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="https://cs.stanford.edu/groups/manips/ok.html">Oussama Khatib</a>, <i>Professor, AI Lab, Stanford University</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>3 Practical Examples of Robotic Applications in the AEC Industry - <i>Atul Khanzode</i></u><br>
+	              		DPR Construction has been exploring the application of robotics in the construction industry for the past few years. Atul will present three examples and share lessons learned from using robots on pilot projects at DPR. First pilot project is the use exoskeletons for material handling activities for their self-performed work crews. The second example is using zero gravity robot arm for drilling pilot holes in concrete slabs for anchor supports. The third example is the use of manufacturing robots for welding wall and floor panels at their Digital fabrication startup called Digital Building Components. Through these real world examples Atul will discuss the potential benefits, the practical challenges and the opportunities for robotics in the AEC industry.<br><br>
+	              		<u>The Age of Human-Robot Collaboration - <i>Oussama Khatib</i></u><br>
+	              		Robotics is undergoing a major transformation in scope and dimension with accelerating impact on the economy, production, and culture of our global society. The generations of robots now being developed will increasingly touch people and their lives. They will explore, work, and interact with humans in their homes, workplaces, in new production systems, and in challenging field domains. The emerging robots will provide increased support in mining, underwater, hostile environments, as well as in domestic, health, industry, and service applications. Combining the experience and cognitive abilities of the human with the strength, dependability, reach, and endurance of robots will fuel a wide range of new robotic applications. The discussion focuses on design concepts, control architectures, task primitives and strategies that bring human modeling and skill understanding to the development of this new generation of collaborative robots.
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Atul Khanzode</i></b> leads DPR Construction’s Technology and Innovation Group. In this role Atul is responsible for the Virtual Design and Construction (VDC), Operations and Preconstruction Technologies, strategic technology initiatives, Innovation, Research & Development and consulting. Atul also works with project teams across the country to implement Virtual Building methods and Lean Construction processes. Atul has worked on some of the most complex healthcare, biotech and advanced technology projects for DPR Construction in the last 20 years. He has focused the last 15 years helping DPR leverage advanced technologies to improve critical business process. Atul collaborates with academia and leading research groups around the world exploring issues related to Integration, Lean Construction and VDC in order to move the industry forward. Atul is a co-author of a book called “Integrating Project Delivery” published by John Wiley & Sons in April 2017. Atul has been instrumental in starting the Corporate Ventures Group at DPR called WND Ventures and manages the strategic investments for WND Ventures. Atul has a Masters Degree in Civil and Environmental Engineering from Duke University, Durham NC. Atul also completed his Ph.D in Construction Engineering and Management, focused on Integrated Practice, VDC and Lean Construction, at the Center for Integrated Facilities Engineering (CIFE), Stanford University.<br><br>
+	              		<b><i>Oussama Khatib</i></b> received his PhD from Sup’Aero, Toulouse, France, in 1980. He is Professor of Computer Science and Director of the Robotics Laboratory at Stanford University. His research focuses on methodologies and technologies in human-centered robotics. He is a Fellow of IEEE, CoEditor of the Springer Tracts in Advanced Robotics (STAR) series, and the Springer Handbook of Robotics. Professor Khatib is the President of the International Foundation of Robotics Research (IFRR). He is recipient of the IEEE RAS Pioneer Award, the George Saridis Leadership Award, the Distinguished Service Award, the Japan Robot Association (JARA) Award, the Rudolf Kalman Award, and the IEEE Technical Field Award. In 2018, Professor Khatib was elected to the National Academy of Engineering.
+	              	</p>
+	                 <ul class="list-inline">
+	                    <li>Date: May 9th 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Buildings, Comfort -->
+    <div class="portfolio-modal modal fade" id="build-comfort" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Smart Buildings, Comfort</h2>
+                  <p class="item-intro text-muted">
+                  	This session is on Smart Buildings, Comfort.<br> More Details to come.
+                  </p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Din Catic</a>, <i>Business Development team, Global Centre of Competence for Cities, Siemens Corporation, London, UK</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="http://pbl.stanford.edu/fruchter_bio.htm">Renate Fruchter</a>, <i>Director of PBL, Civil and Environmental Eng. Dept., Stanford University</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>The Crystal - <i>Din Catic</i></u><br>
+	              		Din will present The Crystal building case study as a role model for sustainable intelligent building focusing on: what it is, why it is sustainable, and what it is used for. It represents a technology and building design showcase that received both LEED Platinum and BREEAM Outstanding certification. In closing Din will present current limitations and a vision for the city of the future.<br><br>
+	              		<u>Can We Talk? </u><br>
+	              		<u>Harmonizing Occupant Well-being and Sustainable Building Performance - <i>Renate Fruchter</i></u><br>
+	              		Knowledge workers are the greatest asset of any corporation. Environmental factors like air quality and temperature impact knowledge workers’ well-being, and influence concentration and motivation to work. Built environment research focuses on occupant comfort which typically prioritizes tangible factors, such as temperature, over imperceptible yet impactful factors like indoor air carbon dioxide (CO2) concentration levels. Well-being offers a comprehensive perspective that includes occupants’ comfort and psycho- physiological states. The accuracy of current models to predict building performance and occupant well- being is compromised by assumptions and simplifications leading to discrepancies between model results and measured performance. What can we learn by monitoring, modeling, analyzing, and visualizing the dynamic interaction between building performance and occupant well-being?
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Din Catic</i></b> is currently in the business development team in the Global Centre of Competence for Cities at Siemens Corporation in London, UK. He is managing specific KPIs for worldwide sales opportunities and conducting urban market intelligence. He studied materials engineering at UCLA and business innovation at Birkbeck University of London. His dissertation, "Entrepreneurship in the Circular Economy: Towards innovative business models" focused on new business models that companies and startups can adopt in their transition to a circular economy. His interests include cleantech, smart cities, and creating lasting impacts on energy, food, and water through technology management and sustainable design.<br><br>
+	              		<b><i>Dr. Renate Fruchter</i></b> is the founding director of the PBL Lab and collaboration thrust leader at CIFE in the Civil and Environmental Engineering Department at Stanford University. Her R&D&Edu focuses on collaboration technologies in support of cross-disciplinary, geographically distributed teamwork in education and corporate settings; interactive physical and virtual work spaces, the impact of technology on learning, engagement, knowledge work productivity, team dynamics, and assessment. She is the leader and developer of the innovative "Architecture, Engineering, Construction (AEC) Global Teamwork" course launched in 1993 engaging university and industry partners worldwide. Her current R&D projects focus on: (1) uncovering cognitive demands on global learners and knowledge workers, engagement, well-being and knowledge work productivity; and (2) monitoring, modeling, simulating, and visualizing occupant and building cooperative sustainable performance. She received her Engineering Diploma from the Civil Engineering Institute, Bucharest, Romania in 1981; MSc in 1986 and Ph.D. in 1990 from Technion Israel Institute of Technology, and Honorary Doctorate in 2011 from AAU Denmark.
+	              	</p>
+	              	
+	                 <ul class="list-inline">
+	                    <li>Date: May 16th 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Construction Documentation -->
+    <div class="portfolio-modal modal fade" id="document" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Construction Documentation</h2>
+                  <p class="item-intro text-muted">
+                  	This session is on Construction Documentation.<br> More Details to come.
+                  </p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Mark LaBell Jr</a>, <i>SR VDC Technical Leader, SSOE</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="http://cvgl.stanford.edu/silvio/">Silvio Savarese</a>, <i>Professor, AI Lab, Stanford University</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>What is the Point of Reality Capture in Engineering and Construction? - <i>Mark LaBell Jr</i></u><br>
+	              		The democratization of laser scanning and reality capture devices has created a plethora of data, one that many in the construction industry never saw coming.  The reality capture data, albeit very simplistic like most modern day technology is still very cumbersome for most to incorporate into the day to day operations of their organizations.  This presentation will cover how SSOE has been able to save their clients $2.8 million USD on reducing unnecessary site visits on their client’s projects.  Examples will show how we have improved our deliverables, reduction of errors and omissions as well as potential loss of reputation because of poor performance and rework during construction.  While it is easy to celebrate the victories we achieve with utilizing reality capture data almost instantaneously in the present, this process took many iterations, projects and years of hard work before we recognized repeatable value on projects.  SSOE Group invests in dedicated staff members focused on process improvement and working with project team members to implement reality capture techniques for each project.<br><br>
+	              		<u>Seeing Objects and People in the 3D world: Visual Intelligence in Perspective - <i>Silvio Savarese</i></u><br>
+	              		Computers can now recognize objects from images, classify simple human activities or reconstruct the 3D geometry of an environment.  However, these achievements are far from the kind of coherent and integrated interpretations that humans are capable of from just a quick glance of the complex 3D world. When we look at an environment, we don't just recognize the objects in isolation, but rather perceive a rich scenery of the 3D space, its objects, the people and all the relations among them. This allows us to effortlessly navigate through the environment, or to interact with objects in the scene with amazing precision or to predict what is about to happen next. In this talk I will give an overview of the research from my group and discuss our latest work on designing visual models that can process different sensing modalities and enable intelligent understanding of the sensing data.  I will also demonstrate that our models are potentially transformative in application areas related to autonomous or assisted navigation, smart environments, social robotics, augmented reality, and large scale information management.
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Mark LaBell Jr</i></b> has a passion and unparalleled dedication for the practice of VDC methods in the AEC industry. He has served as a user and customization expert in 3D BIM/CAD software for over 15 years and provides support and training for users to educate them on how to maintain a sound and practical user environment. Always looking for the next best thing, whether process improvement, software, or hardware when it comes to practical design and user experience, Mark has learned that there is never a “one-sized fits all” approach no matter what the client requirements dictate. He has spearheaded and hosted SSOE’s annual Hackathon, which is a business planning process allowing all non-principal level staff to participate. Mark has presented at numerous industry and regional conferences including Autodesk University, BIMForum, SPAR International, PSMJ AEC Thrive Summit, BIM Integration Congress and Midwest University to name a few. He received his Bachelor of Science in Computer Aided Design and Manufacturing from Eastern Michigan University and works in SSOE’s global headquarters located in Toledo, Ohio.<br><br>
+	              		<b><i>Silvio Savarese</i></b> is a Professor of Computer Science at Stanford University and director of the SAIL-Toyota Center for AI Research at Stanford. He earned his Ph.D. in Electrical Engineering from the California Institute of Technology in 2005 and was a Beckman Institute Fellow at the University of Illinois at Urbana-Champaign from 2005–2008. He joined Stanford in 2013 after being Assistant and then Associate Professor of Electrical and Computer Engineering at the University of Michigan, Ann Arbor, from 2008 to 2013. His research interests include computer vision, robotic perception and machine learning. He is recipient of several awards including a Best Student Paper Award at CVPR 2016, the James R. Croes Medal in 2013, a TRW Automotive Endowed Research Award in 2012, an NSF Career Award in 2011 and Google Research Award in 2010. In 2002 he was awarded the Walker von Brimer Award for outstanding research initiative.
+	              	</p>
+	              	
+	                 <ul class="list-inline">
+	                    <li>Date: May 23rd 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Buildings, Energy -->
+    <div class="portfolio-modal modal fade" id="build-energy" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Smart Buildings, Energy</h2>
+                  <p class="item-intro text-muted">
+                  	This session is on Smart Buildings, Energy.<br> More Details to come.
+                  </p>
+	                <ul>
+	                    <u>Speakers</u>
+	                  	<li style="font-weight:normal"><u>On AEC:</u> <a href="">Gerry Hamilton</a>, <i>Associate Director, Facilities Energy Management, Stanford University</i></li>
+	              		<li style="font-weight:normal"> <u>On AI:</u>  <a href="https://web.stanford.edu/~ramr/">Ram Rajagopal</a>, <i>Professor, Civil & Env. Eng., Stanford University</i></li>
+	              	</ul>
+	              	<br><br>
+
+	              	
+	              	<p style="font-weight:normal">
+	              		<b><u>Talks</u></b><br>
+	              		<u>Stanford’s Integrated Controls & Analytics Program (iCAP) - <i>Gerry Hamilton</i></u><br>
+	              		The Integrated Controls & Analytics Program (iCAP) is an initiative to advance the development of a “smart” campus infrastructure across the University’s portfolio of facilities.  The program holistically addresses the technologies and processes that must be successfully incorporated to realize the benefits of modern concepts like integrated systems, Internet of Things (IoT), and Big Data; and in return improve building and energy efficiency, save resources and improve organizational effectiveness.<br><br>
+	              		<u>Creating Decision Support Systems for the Built Environment using Data Thinking - <i>Ram Rajagopal</i></u><br>
+	              		Modern systems collect data from a variety of sources, from sensors that measure the environment to information from cellphones and non-structured data. Yet, it is not always obvious how can we extract actionable intelligence from this data. The biggest difficulty is in thinking holistically and systematically about how to transform data into intelligence, including understanding the role of rapidly changing technologies, structuring data science and incorporating domain expertise. We will briefly explain the concept of Data Thinking and how it aids domain experts in finding value in data streams. We then illustrate the concept with some practical applications from the energy and construction industries.
+	              	</p>
+	              	<br><br>
+	              	<p style="font-weight:normal">
+	              		<b><u>Speaker Bios</u></b><br>
+	              		<b><i>Gerry Hamilton</i></b> directs the Facilities Energy Management department at Stanford University, which includes the operation of the campus Facilities Automation systems and oversight of the University’s energy efficiency programs. Gerry ensures that buildings and associated processes are operated efficiently and that new facilities incorporate best practices for energy use. Gerry holds a B.S. in Mechanical Engineering as well as an M.B.A. from Santa Clara University. He is also a registered professional engineer in California.<br><br>
+				<b><i>Ram Rajagopal</i></b> is an Associate Professor of Civil and Environmental Engineering and Electrical Engineering (by Courtesy) at Stanford University, where he directs the Stanford Sustainable Systems Lab (S3L), focused on large scale monitoring, data analytics and stochastic control for power and transportation. His current research interests in power systems are in integration of renewables, smart distribution systems and demand-side data analytics. He received his PhD in Electrical Engineering and Computer Sciences (EECS) and MA in Statistics from the University of California Berkeley. He holds more than 30 patents from his work, and has advised or founded various companies in the fields of sensor networks, power systems and data analytics.	              	
+				</p>
+	              	
+	                 <ul class="list-inline">
+	                    <li>Date: May 30th 2018</li>
+	                    <li>Location: Y2E2, Room 292A</li>
+	                 </ul>
+	                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+	                    <i class="fa fa-times"></i>
+	                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+  </body>
+
+</html>
