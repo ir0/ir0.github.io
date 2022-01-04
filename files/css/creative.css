@@ -9,7 +9,7 @@ body {
   width: 100%;
 }
 body {
-  font-family:  'Futura', 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family:  'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
   border-color: #F05F40;
@@ -23,7 +23,8 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #F05F40;
+  color: black;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
@@ -41,6 +42,7 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  color:  black;
 }
 .bg-primary {
   background-color: #F05F40;
