@@ -1,960 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>Iro Armeni</title>
-	<!-- Bootstrap Core CSS -->
-	<link href="files/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="files/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css" /><!-- Plugin CSS -->
-	<link href="files/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
-	<link href="files/css/creative.min.css" rel="stylesheet" />
-	<meta name="theme-color" content="#ffffff">
-</head>
-<body id="page-top">
-	<script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iro Armeni</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 leading-relaxed">
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-white shadow z-10">
+      <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-xl font-bold tracking-tight">Iro Armeni</h1>
+        <ul class="flex space-x-4 text-sm font-medium">
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#news" class="hover:text-blue-600">News</a></li>
+          <li><a href="#teaching" class="hover:text-blue-600">Teaching</a></li>
+          <li><a href="#publications" class="hover:text-blue-600">Publications</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-			  ga('create', 'UA-59354848-1', 'auto');
-			  ga('send', 'pageview');
-	</script>
+    <!-- Hero -->
+    <section class="bg-gray-100 py-20 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <img src="files/images/iro.jpg" alt="Iro Armeni" class="w-40 mx-auto rounded-full mb-4">
+        <h2 class="text-3xl font-semibold mb-4">Assistant Professor, Stanford University</h2>
+        <p class="text-gray-700 text-lg">Leading the <a href="https://gradientspaces.stanford.edu/" class="text-blue-600 underline">Gradient Spaces</a> group. I work at the intersection of civil engineering, architecture, and machine perception to design and construct data-driven environments across physical and digital space.</p>
+        <img src="files/images/GradientSpacesLogo.png" style="width:50%;margin-left: 25%">
+      </div>
+    </section>
 
-	<script language="javascript" type="text/javascript">
-		function showHide(shID) {
-		   if (document.getElementById(shID)) {
-		      if (document.getElementById(shID+'-show').style.display != 'none') {
-		         document.getElementById(shID+'-show').style.display = 'none';
-		         document.getElementById(shID).style.display = 'block';
-		      }
-		      else {
-		         document.getElementById(shID+'-show').style.display = 'inline';
-		         document.getElementById(shID).style.display = 'none';
-		      }
-		   }
-		}
-	</script>
+    <!-- About -->
+    <section id="about" class="py-16 px-6">
+      <div class="max-w-4xl mx-auto space-y-6 text-lg">
+        <h2 class="text-2xl font-semibold mb-4">About</h2>
+        <p>My area of focus is on developing quantitative and data-driven methods that learn from real-world visual data to generate, predict, and simulate new or renewed built environments that place the human in the center. My goal is to create sustainable, inclusive, and adaptive built environments that can support our current and future physical and digital needs.</p>
+        <p>As part of my research vision, I am particularly interested in creating spaces that blend from the 100% physical (real reality) to the 100% digital (virtual reality) and anything in between, with the use of Mixed Reality.</p>
+        <p>Read more in <a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe" class="text-blue-600 underline">A Day in the Life of an Architect in the Gradient World</a>.</p>
 
-	<nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> Menu</button><a class="navbar-brand page-scroll" href="#page-top" style="color: black;text-decoration: none;font-size:16pt">Iro Armeni</a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a class="page-scroll" href="#about" style="color: black;text-decoration: none;">About</a></li>
-					<li><a class="page-scroll" href="#news" style="color: black;text-decoration: none;">News</a></li>
-					<li><a class="page-scroll" href="#project" style="color: black;text-decoration: none;">Publications</a></li>
-					<li><a class="page-scroll" href="#teach" style="color: black;text-decoration: none;">Teaching</a></li>
-					<li><a class="page-scroll" href="#award" style="color: black;text-decoration: none;">Awards</a></li>
-					<li><a class="page-scroll" href="#events" style="color: black;text-decoration: none;">Events</a></li>
-					<li><a class="page-scroll" href="#miscel" style="color: black;text-decoration: none;">Miscellaneous</a></li>
-					<li><a class="page-scroll" href="#older" style="color: black;text-decoration: none;">Older Work</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+     <!-- Education -->
+    <section id="about" class="bg-gray-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto space-y-6 text-lg">
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <ul class="text-sm space-y-4">
+	        <li class="text-sm"><strong>Postdoctoral Researcher (2023)</strong>, ETH Zurich, DBAUG and DINFK, <i>w/ Prof. Daniel Hall, Prof. Catherine de Wolf, and Prof. Marc Pollefeys</i></li>
+	        <li class="text-sm" style="margin:0px"><strong>Ph.D. (2020)</strong>, Civil and Environmental Engineering with Minor in Computer Science, Stanford University, <i>w/ Prof. Martin Fischer and Prof. Silvio Savarese</i></li>
+	        <li class="text-sm" style="margin:0px"><strong>MSc (2013)</strong>, Computer Science, Ionian University</li>
+	        <li class="text-sm" style="margin:0px"><strong>MEng (2011)</strong>, Architectural Engineering, University of Tokyo</li>
+	        <li class="text-sm" style="margin:0px"><strong>Diploma (2009)</strong>, Architectural Engineering, National Technical University of Athens</li>
+	        <li class="text-sm" style="margin:0px">Worked as an architect and consultant for both the private and public sector.</li>
+	    </ul>
+      </div>
+    </section>
 
-	<!--<header>
-		<div class="header-content">
-			<div class="header-content-inner">
-				<p>...</p>
-				<a class="btn btn-primary btn-xl page-scroll" href="#about">...</a></div>
-			</div>
-	</header>-->
+    <!-- Teaching -->
+    <section id="teaching" class="py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6">Teaching</h2>
+        <ul class="text-sm space-y-4">
+          <li><strong>Designing for Gradient Spaces</strong> — CEE342, Stanford, Spring <a href="https://gradientspaces.stanford.edu/lectures/designing-gradient-spaces" class="text-blue-600 underline">Website</a></li>
+          <li><strong>Computer Vision for the Built Environment</strong> — CEE 247C, Stanford, Winter <a href="https://gradientspaces.stanford.edu/computer-vision-built-environment" class="text-blue-600 underline">Website</a></li>
+          <li><strong>AI Applications in AEC</strong> — CEE 329, Stanford, Spring</li>
+        </ul>
+      </div>
+    </section>
 
-	<section id="about">
-		<div class="container">
-			<div class="row" style="margin-top:30px">
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
-					<img src="files/images/iro_armeni.png" alt="Iro Armeni" style="max-width:80%" />
-					<p style="font-size:8pt;"><i>Photo credits: Rod Searcey</i></p>
-				</div>
-				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 text-center">
-					<p style="font-size:11pt;color:black">I am an assistant professor at the Department of Civil and Environmental Engineering, Stanford University, leading the <a href="https://gradientspaces.stanford.edu/"><b>Gradient Spaces</b></a> group. I am interested in interdisciplinary research between Architecture, Civil Engineering, and Machine Perception. My area of focus is on developing quantitative and data-driven methods that learn from real-world visual data to generate, predict, and simulate new or renewed built environments that place the human in the center. My goal is to create sustainable, inclusive, and adaptive built environments that can support our current and future physical and digital needs.</p>
-		            		<a href="https://gradientspaces.stanford.edu/"><img src="files/images/gradient_spaces.gif" style="width:40%" /></a></p>
-	        			<p style="font-size:11pt;color:black">As part of my research vision, I am particularly interested in creating spaces that blend from the 100% physical (real reality) to the 100% digital (virtual reality) and anything in between, with the use of Mixed Reality. To learn more about this vision, I wrote a short story to illustrate this future and the impact on designers. You can read it here:<br><br>
-		            		<a style="font-size:11pt;color:blue" href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe"><b>A Day in the Life of an Architect in the Gradient World</b></a><br>
-		            		<a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe"><img src="files/images/gradient_spaces.png" style="width:20%" /></a></p>
-		            		<br><br>
-		        </div>
-	        </div>
-	        <div class="row" style="margin-top:30px">
-	        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-					<p class="text-faded" style="font-size:11pt;color:black"><b>Education:</b> I concluded my postdoctoral research position at ETH Zurich on July 2023, at the departments of Civil, Env. and Geomatic Engineering and of Computer Science. I was working with <a href="https://research.tudelft.nl/en/persons/daniel-hall">Prof. Daniel Hall</a> (Innovative and Industrial Construction), <a href="https://cea.ibi.ethz.ch/people/catherine_de_wolf.html">Prof. Catherine de Wolf</a> (<a href="https://cea.ibi.ethz.ch/">Circular Engineering for Architecture</a>), and <a href="https://people.inf.ethz.ch/pomarc/">Prof. Marc Pollefeys</a>, <a href="http://www.cvg.ethz.ch/index.php">Computer Vision and Geometry Lab</a>. I was also affiliated with the <a href="https://designplusplus.ethz.ch/">Design++ Center</a> at ETHZ. Previously, I completed my PhD at Stanford University on August 2020, Civil and Environmental Engineering (CEE) Department, Sustainable Design and Construction (SDC) Program, with a PhD minor at the Computer Science Department. I conducted research under the supervision of <a href="http://web.stanford.edu/~fischer/">Martin Fischer</a> (CEE, <a href="https://cife.stanford.edu/">Center for Integrated Facility Engineering - CIFE</a>) and <a href="http://cvgl.stanford.edu/silvio/">Silvio Savarese</a> (CS, <a href="svl.stanford.edu">Stanford Vision and Learning Lab - SVL</a>). Prior to my PhD, I received an MSc in Computer Science (Ionian University-2013), an MEng in Architecture and Digital Design (University of Tokyo-2011), and a Diploma in Architectural Engineering (National Technical University of Athens-2009). I have also worked as an architect and consultant for both the private and public sector.</p>
+    <!-- Publications -->
+    <section id="publications" class="bg-gray-100 py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6">Academic Publications</h2>
+        <div class="space-y-10">
+          <!-- Rectified Point Flow -->
+          <div>
+            <h3 class="text-lg font-semibold">Rectified Point Flow: Generic Point Cloud Pose Estimation</h3>
+            <p class="text-sm text-gray-700">Tao Sun*, Liyuan Zhu*, Shengyu Huang, Shuran Song, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">arXiv preprint</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/abs/2506.05282" class="text-blue-600 underline">PDF</a>
+              <a href="https://rectified-pointflow.github.io/" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- ReSpace -->
+          <div>
+            <h3 class="text-lg font-semibold">ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment</h3>
+            <p class="text-sm text-gray-700">Martin JJ. Bucher, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">arXiv preprint</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/abs/2506.02459" class="text-blue-600 underline">PDF</a>
+              <a href="https://respace.mnbucher.com/" class="text-blue-600 underline">Website</a>
+              <a href="https://www.youtube.com/watch?v=2IMHWJqgDPg&ab_channel=GradientSpacesResearchGroup" class="text-blue-600 underline">Video</a>
+            </div>
+          </div>
+          <!-- ReStyle3D -->
+          <div>
+            <h3 class="text-lg font-semibold">ReStyle3D: Scene-level Appearance Transfer with Semantic Correspondences</h3>
+            <p class="text-sm text-gray-700">Liyuan Zhu, Shengqu Cai*, Shengyu Huang*, Gordon Wetzstein, Naji Khosravan, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">ACM SIGGRAPH 2025</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/abs/2502.10377" class="text-blue-600 underline">PDF</a>
+              <a href="https://restyle3d.github.io/" class="text-blue-600 underline">Website</a>
+              <a href="https://www.youtube.com/watch?v=93FkXriWv2w&ab_channel=GradientSpacesResearchGroup" class="text-blue-600 underline">Video</a>
+            </div>
+          </div>
+          <!-- WildGS-SLAM -->
+          <div>
+            <h3 class="text-lg font-semibold">WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments</h3>
+            <p class="text-sm text-gray-700">Jianhao Zheng*, Zihan Zhu*, Valentin Bieri, Marc Pollefeys, Songyou Peng, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">CVPR 2025</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/abs/2504.03886" class="text-blue-600 underline">PDF</a>
+              <a href="https://wildgs-slam.github.io/" class="text-blue-600 underline">Website</a>
+              <a href="https://www.youtube.com/watch?v=xXuolzFvddQ&t=11s&ab_channel=GradientSpacesResearchGroup" class="text-blue-600 underline">Video</a>
+            </div>
+          </div>
+          <!-- CrossOver -->
+          <div>
+            <h3 class="text-lg font-semibold">CrossOver: Scene Cross-Modal Alignment</h3>
+            <p class="text-sm text-gray-700">Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Dániel Barath, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">CVPR 2025 <i>[Highlight]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2502.15011" class="text-blue-600 underline">PDF</a>
+              <a href="https://sayands.github.io/crossover/" class="text-blue-600 underline">Website</a>
+              <a href="https://www.youtube.com/watch?v=8SEoQyaHuKs" class="text-blue-600 underline">Video</a>
+            </div>
+          </div>
+          <!-- LoopSplat -->
+          <div>
+            <h3 class="text-lg font-semibold">LoopSplat: Loop Closure by Registering 3D Gaussian Splats</h3>
+            <p class="text-sm text-gray-700">Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">3DV 2025 <i>[Oral Presentation]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/abs/2408.10154" class="text-blue-600 underline">PDF</a>
+              <a href="https://loopsplat.github.io/" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- Multi-Hexplanes -->
+          <div>
+            <h3 class="text-lg font-semibold">Multi-Hexplanes: A Lightweight Map Representation for Rendering and 3D Reconstruction</h3>
+            <p class="text-sm text-gray-700">Jianhao Zheng, Gabor Valasek, Daniel Barath, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">WACV 2025 <i>[Oral Presentation]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Zheng_Multi-HexPlanes_A_Lightweight_Map_Representation_for_Rendering_and_3D_Reconstruction_WACV_2025_paper.pdf"  class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- MAP-ADAPT -->
+          <div>
+            <h3 class="text-lg font-semibold">MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps</h3>
+            <p class="text-sm text-gray-700">Jianhao Zheng, Daniel Barath, Marc Pollefeys, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">ECCV 2024</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2406.05849"  class="text-blue-600 underline">PDF</a>
+              <a href="https://www.youtube.com/watch?v=MB2D2j-rJ8E&ab_channel=JianhaoZheng"  class="text-blue-600 underline">Video</a>
+              <a href="https://map-adapt.github.io/"  class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- Where Am I? -->
+          <div>
+            <h3 class="text-lg font-semibold">"Where am I?" Scene Retrieval with Language</h3>
+            <p class="text-sm text-gray-700">Jiaqi Chen, Daniel Barath, <strong>Iro Armeni</strong>, Marc Pollefeys, Hermann Blum</p>
+            <p class="text-sm text-gray-700">ECCV 2024</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2404.02838"  class="text-blue-600 underline">PDF</a>
+              <a href="https://www.youtube.com/watch?v=Qx2Z3rPb5k0&feature=youtu.be"  class="text-blue-600 underline">Video</a>
+              <a href="https://atcelen.github.io/I-Design/"  class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- I-Design -->
+          <div>
+            <h3 class="text-lg font-semibold">I-Design: Personalized LLM Interior Designer</h3>
+            <p class="text-sm text-gray-700">Ata Çelen, Guo Han, Konrad Schindler, Luc Van Gool, <strong>Iro Armeni*</strong>, Anton Obukhov*, Xi Wang*</p>
+            <p class="text-sm text-gray-700">CV4Metaverse, Workshop in ECCV 2024</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2404.02838"  class="text-blue-600 underline">PDF</a>
+              <a href="https://www.youtube.com/watch?v=Qx2Z3rPb5k0&feature=youtu.be"  class="text-blue-600 underline">Video</a>
+              <a href="https://atcelen.github.io/I-Design/"  class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- NSS -->
+          <div>
+            <h3 class="text-lg font-semibold">Nothing Stands Still: A Spatiotemporal Benchmark on 3D Point Cloud Registration Under Large Geometric and Temporal Change</h3>
+            <p class="text-sm text-gray-700">Tao Sun, Yan Hao, Shengyu Huang, Silvio Savarese, Konrad Schindler, Marc Pollefeys, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">ISPRS Journal of Photogrammetry and Remote Sensing 2025</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2311.09346" class="text-blue-600 underline">PDF</a>
+              <a href="https://www.nothing-stands-still.com/"  class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- Living Scenes -->
+          <div>
+            <h3 class="text-lg font-semibold">Living Scenes: Multi-object Relocalization and Reconstruction in Changing 3D Environments</h3>
+            <p class="text-sm text-gray-700">Liyuan Zhu, Shengyu Huang, Konrad Schindler, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">CVPR 2024 <i>[Highlight]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/abs/2312.09138" class="text-blue-600 underline">PDF</a>
+              <a href="https://www.youtube.com/watch?v=U4tCXFGDhWk&ab_channel=LiyuanZhu" class="text-blue-600 underline">Video</a>
+              <a href="https://www.zhuliyuan.net/livingscenes" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- Multiway PC -->
+          <div>
+            <h3 class="text-lg font-semibold">Multiway Point Cloud Mosaicking with Diffusion and Global Optimization</h3>
+            <p class="text-sm text-gray-700">Shengze Jin, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
+            <p class="text-sm text-gray-700">CVPR 2024</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2404.00429" class="text-blue-600 underline">PDF</a>
+              <a href="https://www.youtube.com/watch?v=dnzhKfPIoWg&ab_channel=ShengzeJin" class="text-blue-600 underline">Video</a>
+            </div>
+          </div>
+          <!-- Semantically Guided Feature Matching for Visual SLAM -->
+          <div>
+            <h3 class="text-lg font-semibold">Semantically Guided Feature Matching for Visual SLAM</h3>
+            <p class="text-sm text-gray-700">Oguzhan Ilter, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
+            <p class="text-sm text-gray-700">ICRA 2024</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://ieeexplore.ieee.org/document/10610238" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Volumetric Semantically Consistent 3D Panoptic Mapping -->
+          <div>
+            <h3 class="text-lg font-semibold">Volumetric Semantically Consistent 3D Panoptic Mapping</h3>
+            <p class="text-sm text-gray-700">Yang Miao, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
+            <p class="text-sm text-gray-700">IROS 2024 <i>Oral Presentation</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://browse.arxiv.org/pdf/2309.14737.pdf" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- QReg -->
+          <div>
+            <h3 class="text-lg font-semibold">Q-REG: End-to-End Trainable Point Cloud Registration with Surface Curvature</h3>
+            <p class="text-sm text-gray-700">Shengze Jin, Daniel Barath, Marc Pollefeys, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">3DV 2024</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://browse.arxiv.org/pdf/2309.16023.pdf" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- SGAligner -->
+          <div>
+            <h3 class="text-lg font-semibold">SGAligner: 3D Scene Alignment with Scene Graphs</h3>
+            <p class="text-sm text-gray-700">Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Daniel Barath, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">ICCV 2023</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2304.14880.pdf" class="text-blue-600 underline">PDF</a>
+              <a href="https://sayandebsarkar.com/sgaligner" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- ARrow -->
+          <div>
+            <h3 class="text-lg font-semibold">ARrow: A Real-Time AR Rowing Coach</h3>
+            <p class="text-sm text-gray-700">Elena Iannuci, Zhu-Tian Chen, <strong>Iro Armeni</strong>, Marc Pollefeys, Hanspeter Pfister, Johanna Beyer</p>
+            <p class="text-sm text-gray-700">EuroVis 2023 <i>[Best Short Paper Honorable Mention Award]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="http://arxiv.org/abs/2305.02398" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Learning-Based Relational Object Matching Across Views -->
+          <div>
+            <h3 class="text-lg font-semibold">Learning-Based Relational Object Matching Across Views</h3>
+            <p class="text-sm text-gray-700">Cathrin Elich, <strong>Iro Armeni</strong>, Martin R. Oswald, Marc Pollefeys, Joerg Stueckler</p>
+            <p class="text-sm text-gray-700">ICRA 2023</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="http://arxiv.org/abs/2305.02398"  class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- HoloLabel -->
+          <div>
+            <h3 class="text-lg font-semibold">HoloLabel: Augmented Reality User-In-The-Loop Online Annotation Tool for As-Is Building Information</h3>
+            <p class="text-sm text-gray-700">Dhruv Agrawal*, Janik Lobsiger*, Jessica Bo, Véronique Kaufmann, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">EC3 2022</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://ec-3.org/publications/conferences/EC32022/papers/EC32022_174.pdf"  class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- SemSpray -->
+          <div>
+            <h3 class="text-lg font-semibold">SemSpray: Virtual Reality As-Is Semantic Information Labeling Tool for 3D Spatial Data</h3>
+            <p class="text-sm text-gray-700">Yiming Zhao*, Cyprien Fol*, Yuchang Jiang, Tianyu Wu, <strong>Iro Armeni</strong></p>
+            <p class="text-sm text-gray-700">EC3 2022</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://ec-3.org/publications/conferences/EC32022/papers/EC32022_175.pdf"  class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Implicity -->
+          <div>
+            <h3 class="text-lg font-semibold">ImpliCity: City Modeling From Satellite Images with Deep Implicit Occupancy Fields</h3>
+            <p class="text-sm text-gray-700">Corinne Stucker, Bingxin Ke, Yuanwen Yue, Shengyu Huang, <strong>Iro Armeni</strong>, Konrad Schindler</p>
+            <p class="text-sm text-gray-700">ISPRS Congress 2022 <i>[Best Young Author Award]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2201.09968.pdf"  class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Robust Policies -->
+          <div>
+            <h3 class="text-lg font-semibold">Robust Policies via Mid-Level Visual Representations: An Experimental Study in Manipulation and Navigation</h3>
+            <p class="text-sm text-gray-700">Bryan Chen*, Alexander Sax*, Gene Lewis, <strong>Iro Armeni</strong>, Silvio Savarese, Amir Zamir, Jitendra Malik, Lerrel Pinto</p>
+            <p class="text-sm text-gray-700">CoRL 2020</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/2011.06698.pdf"  class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- 3DSG -->
+          <div>
+            <h3 class="text-lg font-semibold">3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera</h3>
+            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Jerry Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese</p>
+            <p class="text-sm text-gray-700">ICCV 2019</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://3dscenegraph.stanford.edu/images/3DSceneGraph.pdf"  class="text-blue-600 underline">PDF</a>
+              <a href="https://3dscenegraph.stanford.edu/"  class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- SegCloud -->
+          <div>
+            <h3 class="text-lg font-semibold">SEGCloud: Semantic Segmentation of 3D Point Clouds</h3>
+            <p class="text-sm text-gray-700">Lyne P. Tchapmi, Christopher B. Choy, <strong>Iro Armeni</strong>, JunYoung Gwak, Silvio Savarese</p>
+            <p class="text-sm text-gray-700">3DV 2017 <i>[Spotlight Presentation]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://arxiv.org/pdf/1710.07563.pdf" class="text-blue-600 underline">PDF</a>
+              <a href="http://segcloud.stanford.edu" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- 2D-3D-S -->
+          <div>
+            <h3 class="text-lg font-semibold">Joint 2D-3D-Semantic Data for Indoor Scene Understanding</h3>
+            <p class="text-sm text-gray-700"><strong>Iro Armeni*</strong>, Alexander Sax*, Amir R. Zamir, Silvio Savarese</p>
+            <p class="text-sm text-gray-700">Technical Report 2017</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="http://buildingparser.stanford.edu/images/2D-3D-S_2017.pdf" class="text-blue-600 underline">PDF</a>
+              <a href="http://buildingparser.stanford.edu/dataset.html" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- Building Parser -->
+          <div>
+            <h3 class="text-lg font-semibold">3D Semantic Parsing of Large-Scale Indoor Spaces</h3>
+            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Ozan Sener, Amir R. Zamir, Helen Jiang, Ioannis Brilakis, Martin Fisher, Silvio Savarese</p>
+            <p class="text-sm text-gray-700">CVPR 2016 <i>[Oral Presentation]</i></p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="http://buildingparser.stanford.edu/images/3D_Semantic_Parsing.pdf" class="text-blue-600 underline">PDF</a>
+              <a href="https://youtu.be/PB-Ach697Bc" class="text-blue-600 underline">Video</a>
+              <a href="http://buildingparser.stanford.edu/" class="text-blue-600 underline">Website</a>
+            </div>
+          </div>
+          <!-- State of Research in Automatic As-Built Modelling -->
+          <div>
+            <h3 class="text-lg font-semibold">State of Research in Automatic As-Built Modelling</h3>
+            <p class="text-sm text-gray-700">Viorica Pătrăucean,  <strong>Iro Armeni</strong>, Mohammad Nahangi, Jamie Yeung, Ioannis Brilakis, Carl Haas</p>
+            <p class="text-sm text-gray-700">Advanced Engineering Informatics 2015</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://www.sciencedirect.com/science/article/pii/S1474034615000026" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Dynamic Identification -->
+          <div>
+            <h3 class="text-lg font-semibold">A dynamic identification of a historical building using accelerometers with interface modules and a digital synchronization method</h3>
+            <p class="text-sm text-gray-700">Luigi Spedicato,  <strong>Iro Armeni</strong>, Nicola Ivan Giannoccaro, Markos Avlonitis, Sozon Papavlasopoulos</p>
+            <p class="text-sm text-gray-700">Periodical of Key Engineering Materials 2015</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://www.scientific.net/kem.628.204" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Pedestrian Navigation -->
+          <div>
+            <h3 class="text-lg font-semibold">Pedestrian navigation and shortest path: Preference versus distance</h3>
+            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Konstantinos Chorianopoulos</p>
+            <p class="text-sm text-gray-700">Workshop, International Conference on Intelligent Environments 2013</p>
+            <div class="space-x-4 text-sm mt-2">
+              <a href="https://ebooks.iospress.nl/doi/10.3233/978-1-61499-286-8-647" class="text-blue-600 underline">PDF</a>
+            </div>
+          </div>
+          <!-- Coderch -->
+          <div>
+            <h3 class="text-lg font-semibold">Resume of the thesis "More than a machine" J. A. Coderch</h3>
+            <p class="text-sm text-gray-700"><strong>Iro Armeni*</strong>, Telesilla Bristogianni*</p>
+            <p class="text-sm text-gray-700">Technical Chronicles, Technical Chamber of Greece 2020</p>
+          </div>
+          <!-- Add more publications similarly -->
+        </div>
+      </div>
+    </section>
 
-	                <hr style="width:50%;margin-top:30px;margin-bottom:60px">
-					<!--[<a href="files/images/CV_IroArmeni.pdf">Curriculum Vitae</a>] &nbsp; -->
- 					
- 				</div>
- 			</div>
-	        <div class="row">
-	            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-center" style="margin-top:5px">
-	            	<div class="row">
-				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 text-center">
-				            <a href="mailto:iarmeni@stanford.edu"><img src="files/images/email.png" style="width:110%"></a>
-				        </div>
-				        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-11 text-center" style="text-align:left;padding-left:0px;">
-				            <a href="mailto:iarmeni@stanford.edu" style="font-size:11pt;">iarmeni@stanford.edu</a>
-				        </div>
-				    </div>
-	            </div>
+    
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <p class="text-sm mb-2">📧 <a href="mailto:iarmeni@stanford.edu" class="text-blue-600 underline">iarmeni@stanford.edu</a></p>
+        <p class="text-sm mb-2">📍 473 Via Ortega, Stanford, Room 233</p>
+        <div class="mt-4 flex justify-center space-x-6 text-gray-600">
+          <a href="https://scholar.google.com/citations?hl=en&user=m2oTZkIAAAAJ" class="text-sm hover:text-black">Google Scholar</a>
+          <a href="https://twitter.com/ir0armeni" class="text-sm hover:text-black">Twitter</a>
+          <a href="https://www.linkedin.com/in/iro-armeni-a4414861" class="text-sm hover:text-black">LinkedIn</a>
+          <a href="https://bsky.app/profile/ir0armeni.bsky.social" class="text-sm hover:text-black">BlueSky</a>
+        </div>
+      </div>
+    </section>
 
-	            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-center" style="margin-top:5px">
-	            	<div class="row">
-				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 text-center">
-				            <a href="https://scholar.google.com/citations?hl=en&user=m2oTZkIAAAAJ"><img src="files/images/scholar.png" style="width:110%"></a>
-				        </div>
-				        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-11 text-center" style="text-align:left;padding-left:0px;">
-				            <a href="https://scholar.google.com/citations?hl=en&user=m2oTZkIAAAAJ" style="font-size:11pt">Google Scholar</a>
-				        </div>
-				    </div>
-		        </div>
-
-	            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-center" style="margin-top:5px">
-		            <div id="310364092139539667" align="left" style="width:110%; overflow-y: hidden;" class="wcustomhtml"><a class="twitter-follow-button" href="https://twitter.com/ir0armeni" data-size="large">Follow @ir0armeni</a></div>
-		        </div>
-
-		        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-center" style="margin-top:5px">
-	            	<div class="row">
-				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 text-center">
-				            <a href="https://www.linkedin.com/in/iro-armeni-a4414861"><img src="files/images/linkedin.png" style="width:110%"></a>
-				        </div>
-				        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-11 text-center" style="text-align:left;padding-left:0px;">
-				            <a href="https://www.linkedin.com/in/iro-armeni-a4414861" style="font-size:11pt;">LinkedIn</a>
-				        </div>
-				    </div>
-	            </div>
-
-		        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-center" style="margin-top:5px">
-			        <div class="row">
-				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 text-center">
-				            <a href=""><img src="files/images/address.png" style="width:70%;"></a>
-				        </div>
-				        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-11 text-center" style="text-align:left;padding-left:0px;">
-				            <a href="https://maps.app.goo.gl/3U3Ej1CJyrWJEmEdA" style="font-size:11pt;">473 Via Ortega, Stanford, Room 233</a>
-				        </div>
-				    </div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--News-->
-	<section class="bg-primary" id ="news">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<h2 class="section-heading text-center" style="color: black"><b>Recent Highlights</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-					&nbsp;
-					<p style="margin-bottom:15px;color:black;font-size:9pt"><i>(This section is not maintained frequently. To stay up-to-date please check the twitter feed.)</i></p>
-					<!-- Template
-
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							
-						</div>
-					</div>
-
-					-->
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Oct 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							The Gradien Spaces research group is live: <a href="https://gradientspaces.stanford.edu/">gradientspaces.stanford.edu</a>.
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Oct 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							I will be giving a talk at the "International Challenge on Compositional and Multimodal Perception" workshop, ICCV 2023.
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Jul 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							My postdoctoral research position at ETHZ is ending after 2.5 years. Next, I am starting an assistant professor appointment at the Department of Civil and Environmental Engineering, Stanford University.
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Jul 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							Our paper <a href="https://sayandebsarkar.com/sgaligner/">“SGAligner: 3D Scene Alignment with Scene Graphs”</a> (Deb Sarkar et al.) on aligning 3D static & temporal scenes using 3D scene graphs, was accepted at <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>.
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Jul 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							I will be teaching a class on "Computer Vision and Machine Learning for Construction" at the <a href="https://ec-3.org/school2023/">EC3 Summer School 2023</a>, in Crete.
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Jun 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							I will be presenting a demo on June 2nd at <a href="https://cvpr2023.thecvf.com/">CVPR 2023</a> on our new work and benchmark <a href="http://nothing-stands-still.com/">Nothing Stands Still"</a>.
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[May 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							I will be giving a talk at the <a href="https://construction-robots.github.io/">2nd Workshop on Future of Construction, ICRA 2023</a>. 
-						</div>
-					</div>
-					<div class="row" style="margin-bottom:3px;color:black">
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;margin-right:0px;padding-right:0px">
-							<b>[Apr 2023]</b>
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="text-align:left;margin-left:0px;padding-left:0px">
-							The submission for the two challenges in the <i>"Computer Vision in the Built Environment"</i> CVPR23 Workshop is now open until June 2nd. For more details see <a href="https://cv4aec.github.io/">here</a>.
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
-					<!--style="width:100%"-->
-                    <a class="twitter-timeline" data-height="650" href="https://twitter.com/ir0armeni?ref_src=twsrc%5Etfw">Tweets by ir0armeni</a> 
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!--Projects-->
-	<section id="project">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 text-center">
-					<h2 class="section-heading" style="color: black;"><b>Academic Publications</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<!-- Template
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="WEBLINK"><img src="files/images/FILE" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>TITLE</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CONFERENCE/JOURNAL YEAR<br>
-					[<a href="">pdf</a>] &nbsp; [<a href="">website</a>] &nbsp; [<a href="">code</a>] &nbsp; [<a href="">STH_ELSE</a>]
-				</div>
-			</div>
-			-->
-			<!-- I-Design -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://atcelen.github.io/I-Design/"><img src="files/images/i_design.png" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>I-Design: Personalized LLM Interior Designer</b><br>
-					Ata Çelen, Guo Han, Konrad Schindler, Luc Van Gool, <span style="text-decoration:underline">Iro Armeni*</span>, Anton Obukhov*, Xi Wang*<br>
-					arXiv preprint 2024 <i>(* equal supervision)</i><br>
-					[<a href="https://arxiv.org/pdf/2404.02838.pdf">pdf</a>] &nbsp; [<a href="https://atcelen.github.io/I-Design/">website</a>] &nbsp; [<a href="https://www.youtube.com/watch?v=Qx2Z3rPb5k0&ab_channel=AtaCelen">video</a>]
-				</div>
-			</div>
-			<!-- LivingScenes -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://www.zhuliyuan.net/livingscenes"><img src="files/images/livingscenes.png" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Living Scenes: Multi-object Relocalization and Reconstruction in Changing 3D Environments</b><br>
-					Liyuan Zhu, Shengyu Huang, Konrad Schindler, <span style="text-decoration:underline">Iro Armeni</span><br>
-					CVPR 2024 Conference, <i>Poster Highlight</i><br>
-					[<a href="https://arxiv.org/pdf/2312.09138.pdf">pdf</a>] &nbsp; [<a href="https://www.zhuliyuan.net/livingscenes">website</a>] &nbsp; [<a href="https://github.com/GradientSpaces/LivingScenes">code</a>] &nbsp; [<a href="https://www.youtube.com/watch?v=U4tCXFGDhWk&ab_channel=LiyuanZhu">video</a>]
-				</div>
-			</div>
-			<!-- ODIN -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    			<img src="files/images/odin.png" style="width:90%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Multiway Point Cloud Mosaicking with Diffusion and Global Optimization</b><br>
-					Shengze Jin, <span style="text-decoration:underline">Iro Armeni</span>, Marc Pollefeys, Daniel Barath<br>
-					CVPR 2024 Conference<br>
-					[<a href="https://arxiv.org/pdf/2404.00429.pdf">pdf</a>] &nbsp; [<a href="https://github.com/jinsz/Multiway-Point-Cloud-Mosaicking-with-Diffusion-and-Global-Optimization">code</a>] &nbsp; [<a href="https://www.youtube.com/watch?v=dnzhKfPIoWg&ab_channel=ShengzeJin">video</a>]
-				</div>
-			</div>
-			<!-- Semantically Guided SLAM -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    			<img src="files/images/semantic_slam_ICRA2024.png" style="width:90%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Semantically Guided Feature Matching for Visual SLAM</b><br>
-					Oguzhan Ilter, <span style="text-decoration:underline">Iro Armeni</span>, Marc Pollefeys, Daniel Barath<br>
-					ICRA 2024 Conference<br>
-				</div>
-			</div>
-			<!-- VolMap -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/VolMap_2023.png" style="width:90%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Volumetric Semantically Consistent 3D Panoptic Mapping</b><br>
-					Yang Miao, <span style="text-decoration:underline">Iro Armeni</span>, Marc Pollefeys, Daniel Barath<br>
-					arXiv preprint 2023<br>
-					[<a href="https://browse.arxiv.org/pdf/2309.14737.pdf">pdf</a>]
-				</div>
-			</div>
-			<!-- QREG -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/QReg_2023.png" style="width:90%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Q-REG: End-to-End Trainable Point Cloud Registration with Surface Curvature</b><br>
-					Shengze Jin, Daniel Barath, Marc Pollefeys, <span style="text-decoration:underline">Iro Armeni</span><br>
-					3DV 2024 Conference<br>
-					[<a href="https://browse.arxiv.org/pdf/2309.16023.pdf">pdf</a>]
-				</div>
-			</div>
-			<!-- SGAligner -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://sayandebsarkar.com/sgaligner"><img src="files/images/sgaligner.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>SGAligner: 3D Scene Alignment with Scene Graphs</b><br>
-					Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Daniel Barath, <span style="text-decoration:underline">Iro Armeni</span><br>
-					ICCV 2023 Conference<br>
-					[<a href="https://arxiv.org/pdf/2304.14880.pdf">pdf</a>] &nbsp; [<a href="https://sayandebsarkar.com/sgaligner">website</a>] &nbsp; [<a href="https://github.com/sayands/sgaligner">code</a>] &nbsp; [<a href="https://github.com/sayands/sgaligner/#benchmark-chart_with_upwards_trend">benchmark</a>]
-				</div>
-			</div>
-			<!-- AR Rowing Coach -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/ARrow.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>ARrow: A Real-Time AR Rowing Coach</b><br>
-					Elena Iannuci, Zhu-Tian Chen, <span style="text-decoration:underline">Iro Armeni</span>, Marc Pollefeys, Hanspeter Pfister, Johanna Beyer<br>	
-					EuroVis 2023 Conference [Best Short Paper Honorable Mention Award]<br>
-				</div>
-			</div>
-			<!-- Multi-view matching -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/view_matching.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Learning-Based Relational Object Matching Across Views</b><br>
-					Cathrin Elich, <span style="text-decoration:underline">Iro Armeni</span>, Martin R. Oswald, Marc Pollefeys, Joerg Stueckler<br>	
-					ICRA 2023 Conference<br>
-					[<a href="http://arxiv.org/abs/2305.02398">pdf</a>]
-				</div>
-			</div>
-			<!-- HoloLabel -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    			<img src="files/images/hololabel.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>HoloLabel: Augmented Reality User-In-The-Loop Online Annotation Tool for As-Is Building Information</b><br>
-					Dhruv Agrawal*, Janik Lobsiger*, Jessica Bo, Véronique Kaufmann, and <span style="text-decoration:underline">Iro Armeni</span><br>	
-					EC3 2022 Conference<br>
-					[<a href="https://ec-3.org/publications/conferences/EC32022/papers/EC32022_174.pdf">pdf</a>]
-				</div>
-			</div>
-			<!-- SemSpray -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    			<img src="files/images/semspray.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>SemSpray: Virtual Reality As-Is Semantic Information Labeling Tool for 3D Spatial Data</b><br>
-					Yiming Zhao*, Cyprien Fol*, Yuchang Jiang, Tianyu Wu, and <span style="text-decoration:underline">Iro Armeni</span><br>	
-					EC3 2022 Conference<br>
-					[<a href="https://ec-3.org/publications/conferences/EC32022/papers/EC32022_175.pdf">pdf</a>]
-				</div>
-			</div>
-			<!-- ImpliCity -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    			<img src="files/images/implicity.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>ImpliCity: City Modeling From Satellite Images with Deep Implicit Occupancy Fields</b><br>
-					Corinne Stucker, Bingxin Ke, Yuanwen Yue, Shengyu Huang, <span style="text-decoration:underline">Iro Armeni</span>, and Konrad Schindler<br>	
-					ISPRS Congress 2022 [Best Young Author Award]<br>
-					[<a href="https://arxiv.org/pdf/2201.09968.pdf">pdf</a>]
-				</div>
-			</div>
-			<!-- Robust Policies -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/robust_2020.png" style="width:100%"/>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Robust Policies via Mid-Level Visual Representations: An Experimental Study in Manipulation and Navigation</b><br>
-					Bryan Chen*, Alexander Sax*, Gene Lewis, <span style="text-decoration:underline">Iro Armeni</span>, Silvio Savarese, Amir Zamir, Jitendra Malik, and Lerrel Pinto<br>
-					CoRL 2020<br>
-					[<a href="https://arxiv.org/pdf/2011.06698.pdf">pdf</a>]
-				</div>
-			</div>
-			<!-- 3D Scene Graph -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="http://3dscenegraph.stanford.edu/"><img src="files/images/3DSceneGraph.png" style="width:100%"/></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Jerry Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese<br>
-					ICCV 2019<br>
-					[<a href="https://3dscenegraph.stanford.edu/images/3DSceneGraph.pdf" style="color:black">pdf</a>] &nbsp; [<a href="https://3dscenegraph.stanford.edu">website</a>] &nbsp; [<a href="https://github.com/StanfordVL/3DSceneGraph">code</a>] &nbsp; [<a href="https://3dscenegraph.stanford.edu/database.html">dataset</a>]
-				</div>
-			</div>
-			<!-- SegCloud -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="http://segcloud.stanford.edu/"><img src="files/images/SeGCloud.jpg" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>SEGCloud: Semantic Segmentation of 3D Point Clouds</b><br>
-					Lyne P. Tchapmi, Christopher B. Choy, <span style="text-decoration:underline">Iro Armeni</span>, JunYoung Gwak, Silvio Savarese<br>
-					3DV 2017 [Spotlight Presentation]<br>
-					[<a href="https://arxiv.org/pdf/1710.07563.pdf">pdf</a>] &nbsp; [<a href="http://segcloud.stanford.edu/">website</a>]
-				</div>
-			</div>
-			<!-- 2D3DS -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="http://buildingparser.stanford.edu/dataset.html"><img src="files/images/2D3DS.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Joint 2D-3D-Semantic Data for Indoor Scene Understanding</b><br>
-					<span style="text-decoration:underline">Iro Armeni*</span>, Alexander Sax*, Amir R. Zamir, Silvio Savarese<br>
-					Technical Report 2017<br>
-					[<a href="http://buildingparser.stanford.edu/images/2D-3D-S_2017.pdf">pdf</a>] &nbsp; [<a href="http://buildingparser.stanford.edu/dataset.html">website</a>] &nbsp; [<a href="https://github.com/alexsax/2D-3D-Semantics">code</a>]
-				</div>
-			</div>
-			<!-- BParser -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="http://buildingparser.stanford.edu/"><img src="files/images/S3DIS.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>3D Semantic Parsing of Large-Scale Indoor Spaces</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Ozan Sener, Amir R. Zamir, Helen Jiang, Ioannis Brilakis, Martin Fisher, Silvio Savarese<br>
-					CVPR 2016 [Oral Presentation]<br>
-					[<a href="http://buildingparser.stanford.edu/images/3D_Semantic_Parsing.pdf">pdf</a>] &nbsp; [<a href="http://buildingparser.stanford.edu">website</a>] &nbsp; [<a href="https://youtu.be/PB-Ach697Bc">video</a>]
-				</div>
-			</div>
-			<!-- State of As-Built -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/asbuilt_2015.png" style="width:100%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>State of Research in Automatic As-Built Modelling</b><br>
-					Viorica Pătrăucean, <span style="text-decoration:underline">Iro Armeni</span>, Mohammad Nahangi, Jamie Yeung, Ioannis Brilakis, Carl Haas<br>
-					Advanced Engineering Informatics 2015<br>
-					[<a href="https://www.sciencedirect.com/science/article/pii/S1474034615000026#">pdf</a>]
-				</div>
-			</div>
-			<!-- Dynamic Identification -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/identification_2015.png" style="width:100%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>A dynamic identification of a historical building using accelerometers with interface modules and a digital synchronization method</b><br>
-					Luigi Spedicato, <span style="text-decoration:underline">Iro Armeni</span>, Nicola Ivan Giannoccaro, Markos Avlonitis, Sozon Papavlasopoulos<br>
-					Periodical of Key Engineering Materials 2015<br>
-					[<a href="https://www.scientific.net/kem.628.204">pdf</a>]
-				</div>
-			</div>
-			<!-- Pedestrian Navigation -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/pedestrain_2013.png" style="width:100%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Pedestrian navigation and shortest path: Preference versus distance</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Konstantinos Chorianopoulos<br>
-					Workshop, International Conference on Intelligent Environments 2013<br>
-					[<a href="https://ebooks.iospress.nl/doi/10.3233/978-1-61499-286-8-647">pdf</a>]
-				</div>
-			</div>
-			<!-- Coderch -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <img src="files/images/coderch.png" style="width:60%" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Resume of the thesis "More than a machine" J. A. Coderch</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Telesilla Bristogianni<br>
-					Technical Chronicles, Technical Chamber of Greece 2020<br>
-				</div>
-			</div>
-			
-			
-		</div>
-	</section>
-
-	<!-- Books & Chapters -->
-	<section class="bg-primary" id="book">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 text-center">
-					<h2 class="section-heading" style="color: black;"><b>Books & Chapters</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<!-- Template
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="WEBLINK"><img src="files/images/FILE" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>TITLE</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CONFERENCE/JOURNAL YEAR<br>
-					[<a href="">pdf</a>] &nbsp; [<a href="">website</a>] &nbsp; [<a href="">code</a>] &nbsp; [<a href="">STH_ELSE</a>]
-				</div>
-			</div>
-			-->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://link.springer.com/book/10.1007/978-3-031-39675-5#toc"><img src="files/images/AI_Circularity.png" style="width:40%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color:black">
-					<b>Artificial Intelligence for Predicting Reuse Patterns</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Deepika Raghu, Catherine De Wolf<br>
-					A Circular Built Environment in the Digital Age, Eds. C.D. Wolf, S. Çetin, N.M.P. Bocken<br>
-					Springer Nature 2024<br>
-					[<a href="https://link.springer.com/book/10.1007/978-3-031-39675-5#toc">link</a>]
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Teaching -->
-	<section id="teach">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 text-center">
-					<h2 class="section-heading" style="color: black;"><b>Teaching</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<!-- Template
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="WEBLINK"><img src="files/images/FILE" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;">
-					<b>TITLE</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CONFERENCE/JOURNAL YEAR<br>
-					[<a href="">pdf</a>] &nbsp; [<a href="">website</a>] &nbsp; [<a href="">code</a>] &nbsp; [<a href="">STH_ELSE</a>]
-				</div>
-			</div>
-			-->
-			<!-- Computer Vision for the Built Environment 24 -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Designing for Gradient Spaces</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CEE, Stanford | Spring '24
-					[<a href="https://gradientspaces.stanford.edu/lectures/designing-gradient-spaces" style="color:black">website</a>]
-				</div>
-			</div>
-			<!-- Computer Vision for the Built Environment 24 -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Computer Vision for the Built Environment</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CEE, Stanford | Winter '24
-					[<a href="https://gradientspaces.stanford.edu/computer-vision-built-environment" style="color:black">website</a>]
-				</div>
-			</div>
-			<!-- Digital Transformation for Circular Construction -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Digital Transformation for Circular Construction</b><br>
-					Catherine De Wolf, <span style="text-decoration:underline">Iro Armeni</span><br>
-					CEE, ETHZ | Spring '23
-				</div>
-			</div>
-			<!-- MR Course -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Mixed Reality</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Marc Pollefeys<br>
-					CS, ETHZ | Autumn '22<br>
-					[<a href="http://www.cvg.ethz.ch/teaching/mrlab/" style="color:black">website</a>]
-				</div>
-			</div>
-			<!-- CV4ACFM -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Introduction to Visual Machine Perception for Architecture, Construction, and Facility Management</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CEE, ETHZ | Spring '22, '21<br>
-					[<a href="http://people.inf.ethz.ch/iarmeni/cv4acfm.html" style="color:black">website</a>]
-				</div>
-			</div>
-			<!-- DL Seminar -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Deep Learning for Computer Vision</b> [seminar]<br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CS, ETHZ | Spring '22, '21<br>
-					[<a href="http://www.cvg.ethz.ch/teaching/dlseminar/" style="color:black">website</a>]
-				</div>
-			</div>
-														 <!-- MR Course -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>Mixed Reality</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Federica Bogo, Marc Pollefeys<br>
-					CS, ETHZ | Autumn '21<br>
-					[<a href="http://www.cvg.ethz.ch/teaching/mrlab/" style="color:black">website</a>]
-				</div>
-			</div>
-			<!-- AIinAEC -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-muted" style="font-size:11pt;color: black;">
-					<b>AI applications in the AEC industry</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span>, Martin Fischer<br>
-					CEE, Stanford | Spring '18, '19<br>
-					[<a href="https://cs.stanford.edu/~iarmeni/cee329/index.html" style="color:black">website</a>]
-				</div>
-			</div>
-		</div>
-	</section>
-		
-
-	<!-- Events -->
-	<section class="bg-primary" id="events">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 text-center">
-					<h2 class="section-heading" style="color: black"><b>Organized Events</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<!-- Template
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="WEBLINK"><img src="files/images/FILE" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;">
-					<b>TITLE</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					CONFERENCE/JOURNAL YEAR<br>
-					[<a href="">pdf</a>] &nbsp; [<a href="">website</a>] &nbsp; [<a href="">code</a>] &nbsp; [<a href="">STH_ELSE</a>]
-				</div>
-			</div>
-			-->
-			<!-- SG2RL CVPR 24  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://sites.google.com/view/sg2rl"><img src="files/images/SG2RL_CVPR24.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>2nd Workshop on Scene Graphs and Graph Representation Learning</b><br>
-					CVPR 2024<br>
-					[<a href="https://sites.google.com/view/sg2rl">website</a>]
-				</div>
-			</div>	
-			<!-- CVAEC CVPR 24  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://cv4aec.github.io/index.html"><img src="files/images/cv4aec_2024.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>4th Workshop and Challenge on Computer Vision in the Built Environment for the Design, Construction, and Operation of Buildings</b><br>
-					CVPR 2024<br>
-					[<a href="https://cv4aec.github.io">website</a>]
-				</div>
-			</div>	
-			<!-- NSS ICRA 2024  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="hhttps://hilti-challenge.com/index.html"><img src="files/images/nss_2024.jpeg" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>Nothing Stands Still Challenge</b><br>
-					ICRA 2024<br>
-					[<a href="https://hilti-challenge.com/index.html">website</a>]
-				</div>
-			</div>		
-			<!-- CVAAD ICCV 23  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://cvaad-workshop.github.io/"><img src="files/images/CVAAD_2023.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>1st Computer Vision Aided Architectural Design Workshop</b><br>
-					ICCV 2023<br>
-					[<a href="https://cvaad-workshop.github.io/">website</a>]
-				</div>
-			</div>	
-			<!-- SG2RL ICCV 23  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://sg2rl.github.io/"><img src="files/images/SG2RL_ICCV23.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>1st Workshop on Scene Graphs and Graph Representation Learning</b><br>
-					ICCV 2023<br>
-					[<a href="https://sg2rl.github.io/">website</a>]
-				</div>
-			</div>		
-			<!-- CVAEC CVPR 23  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://cv4aec.github.io/index.html"><img src="files/images/cv4aec_2023.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>3rd Workshop and Challenge on Computer Vision in the Built Environment for the Design, Construction, and Operation of Buildings</b><br>
-					CVPR 2023<br>
-					[<a href="https://cv4aec.github.io/cvpr2023">website</a>]
-				</div>
-			</div>												  
-			<!-- CVAEC CVPR 22  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://cv4aec.github.io/index.html"><img src="files/images/cv4aec_2022.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>2nd Workshop and Challenge on Computer Vision in the Built Environment for the Design, Construction, and Operation of Buildings</b><br>
-					CVPR 2022<br>
-					[<a href="https://cv4aec.github.io/index.html">website</a>]
-				</div>
-			</div>
-			<!-- AI4AEC 2nd -->
-			<div class="row" style="margin-bottom:50px;">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://ai4aec.stanford.edu/colloquium2021.html"><img src="files/images/colloquium_teaser.gif" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>Built to Change.</b> Let's Reuse Buildings not AEC Practices<br>
-					2nd Colloquium on AI4AEC 2021<br>
-					[<a href="https://ai4aec.stanford.edu/colloquium2021.html">website</a>] &nbsp; [<a href="https://ai4aec.stanford.edu/recordings2021.html">recordings</a>]
-				</div>
-			</div>
-			<!-- CV4AEC CVPR 21  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://cv4aec.github.io/index.html"><img src="files/images/cv4aec_2021.png" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>1st Workshop and Challenge on Computer Vision in the Built Environment for the Design, Construction, and Operation of Buildings</b><br>
-					CVPR 2021<br>
-					[<a href="https://cv4aec.github.io/index_2021.html">website</a>] &nbsp; [<a href="https://cv4aec.github.io/index_2021.html#recordings">recordings</a>]
-				</div>
-			</div>
-			<!-- AI4AEC 1st  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://ai4aec.stanford.edu/colloquium2020.html"><img src="files/images/colloquium_2020.gif" style="width:100%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:1%">
-					<b>Is AI Ready for the Buidling Industry?</b> (and vice-versa)<br>
-					1st Colloquium on AI4AEC 2020<br>
-					[<a href="https://ai4aec.stanford.edu/colloquium2020.html">website</a>] &nbsp; [<a href="https://ai4aec.stanford.edu/recordings.html">recordings</a>]
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--Awards-->
-	<section id="award">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
-					<h2 class="section-heading text-center" style="color: black;"><b>Awards & Scholarships</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-						<ul style="font-size:11pt;color:black">
-					<li style="margin-bottom:5px"><a href="https://ethz.ch/en/research/research-promotion/eth-fellowships.html">ETH Zurich PostDoctoral Fellowship, 2020</a></li>
-				        <li style="margin-bottom:5px"><a href="https://research.googleblog.com/2017/04/announcing-2017-google-phd-fellows-for.html?m=1">Google PhD Fellowship, 2017</a></li>
-				        <li style="margin-bottom:5px">CIFE Seed Research Awards for 2016-17, Center for Integrated Facility Engineering, Stanford University (Sep 2016 - June 2017), Funding for PhD Studies </li>
-				        <li style="margin-bottom:5px">School of Engineering Fellowship, Stanford University (Sep 2015 - June 2016), Funding for PhD Studies</li>
-				        <li style="margin-bottom:5px">Marie-Curie Fellow (Oct 2014 - Mar 2015), CIG: Automated As-Built Modelling of the Built Infrastructure, Funding for Graduate studies in UK</li>
-				        <li style="margin-bottom:5px">Marie-Curie Fellow (Oct 2013 - Sep 2014), BIMAutoGen: International Research Staff Exchange Scheme, Funding for Graduate studies in UK</li>
-				        <li style="margin-bottom:5px">MEXT Scholarship (Oct 2009 - Aug 2011), Japanese Government Scholarship (MEXT), For Graduate Studies in Japan</li>
-				        <li style="margin-bottom:5px">1st Prize(2010), Team project, Architectural Competition: Municipal Theatre of Corfu- Renovation of the facades and the entrance piazza</li>
-				        <li style="margin-bottom:5px">1st of 15 equal prizes (2008), Team project, Architectural Competition: SEGM Housing Competition for Fire Victims</li>
-				        <li style="margin-bottom:5px">Socrates/Erasmus Scholarship (Feb 2007 - Jul 2007), For attending a 6 months exchange program</li>
-				    	</ul>
-				</div>
-			</div>
-	</section>
-
-	<!-- Miscel -->
-	<section class="bg-primary" id="miscel">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 text-center">
-					<h2 class="section-heading" style="color: black"><b>Miscellaneous</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<!-- Template
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="WEBLINK"><img src="files/images/FILE" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;">
-					<b>TITLE</b><br>
-					<span style="text-decoration:underline">Iro Armeni</span><br>
-					TYPE/VENUE<br>
-					[<a href="">pdf</a>] &nbsp; [<a href="">link</a>] &nbsp; [<a href="">code</a>] &nbsp; [<a href="">STH_ELSE</a>]
-				</div>
-			</div>
-			-->
-			<!-- CEA Podcast -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="WEBLINK"><img src="files/images/cea_podcast.png" style="width:90%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;">
-					<b>Computer Vision and Mixed Reality in Architecture with Prof. Iro Armeni</b><br>
-					Circular Engineering for Architecture Podcast, 2024<br>
-					[<a href="https://library-of-reuse.ch/podcast/2-iro-armeni">link</a>]
-				</div>
-			</div>
-			<!-- Stanford Eng Spotlight -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://engineering.stanford.edu/spotlight/iro-armeni"><img src="files/images/iroarmeni_0.jpg" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;">
-					<b>Spotlight</b><br>
-					Stanford Engineering 2023<br>
-					[<a href="https://engineering.stanford.edu/spotlight/iro-armeni">website</a>]
-				</div>
-			</div>
-			<!-- Day in the Life, Gradient Worlds -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe"><img src="files/images/gradient_spaces.png" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;">
-					<b>A Day in the Life of an Architect in the Gradient World</b><br>
-					Short Story, Iro Armeni<br>
-					[<a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe">link</a>]
-				</div>
-			</div>
-			<!-- ICML 22, Workshop on ML for Computational Design -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://slideslive.com/38987991/userbased-space-suitability-for-sustainable-inclusive-and-adaptive-built-environments"><img src="files/images/ICML22.png" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;">
-					<b>User-based Space Suitability for Sustainable, Inclusive, and Adaptive Built Environments</b><br>
-					Keynote Talk, <a href="https://mlcompdesign.github.io/">Workshop on Machine Learning in Computational Design</a>, ICML'22<br>
-					[<a href="https://slideslive.com/38987991/userbased-space-suitability-for-sustainable-inclusive-and-adaptive-built-environments">link</a>]
-				</div>
-			</div>
-			<!-- Engineering ArchiTECHure -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://www.youtube.com/watch?app=desktop&v=FjrEtIFER8k&ab_channel=EngineeringArchiTECHure"><img src="files/images/engarchtect.png" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:5%">
-					<b>Interview</b><br>
-					Engineering ArchiTECHure 2021<br>
-					[<a href="https://www.youtube.com/watch?app=desktop&v=FjrEtIFER8k&ab_channel=EngineeringArchiTECHure">link</a>]
-				</div>
-			</div>
-			<!-- Computer Vision News -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://www.rsipvision.com/ComputerVisionNews-2018September/24/"><img src="files/images/rsipvision.png" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:5%">
-					<b>Women in Computer Vision</b><br>
-					Computer Vision News 2018<br>
-					[<a href="https://www.rsipvision.com/ComputerVisionNews-2018September/24/">pdf</a>]
-				</div>
-			</div>
-			<!-- Modern Architect  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://www.modlar.com/modernarchitect/22/s01-episode-2-iro-armeni/"><img src="files/images/podcast.png" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:5%">
-					<b>Interview</b><br>
-					The Modern Architect (KZSU) 2016<br>
-					[<a href="https://www.modlar.com/modernarchitect/22/s01-episode-2-iro-armeni/">link</a>]
-				</div>
-			</div>
-			<!-- Stanford Eng news  -->
-			<div class="row" style="margin-bottom:50px">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                    <a href="https://engineering.stanford.edu/magazine/article/new-computer-vision-system-creates-3-d-maps-building-interiors"><img src="files/images/stanford_engnews.jpeg" style="width:80%" /></a>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-muted" style="font-size:11pt;color: black;padding-top:3%">
-					<b>A new computer vision system creates 3-D maps of building interiors</b><br>
-					Stanford Engineering News 2016<br>
-					[<a href="https://engineering.stanford.edu/magazine/article/new-computer-vision-system-creates-3-d-maps-building-interiors">link</a>]
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--Older Work-->
-	<section id="older">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<h2 class="section-heading text-center" style="color: black;"><b>Selected Older Work</b></h2>
-					<hr class="primary" style="border-color: black;"/>
-					<ul style="font-size:11pt;color: black;" class="text-muted">
-						<!--<li style="margin-bottom:5px">Armeni, I., Bristogianni, T., Tessas, C., Zerefos, S., (2013) "Municipal Theatre of Corfu: Renovation of the facades and the entrance piazza", Panorama of Greek Architecture, Exhibition at Technopolis, May 2013, Athens, GR</li>-->
-						<!--<li style="margin-bottom:5px">Armeni, I., Bristogianni, T., Tessas, C., Zerefos, S., (2013) "Housing for the fire victims of the extensive wildfires of August 2007", Imagine the City: Pyrgos 2013, Exhibition at Latseio City Hall, May 2013, Pyrgos - Elis, GR</li>-->
-						<li style="margin-bottom:5px"><span style="text-decoration:underline">Iro Armeni</span>, Olesia Biloborodko, Trudi Ko (2013) Research Design Project on Patterns and Digital Computation, "Patterns and Layering: Japanese Spatial Culture, Nature and Architecture", Liotta, S. J., Belfiore, M., (eds), 2012</li>
-						<li style="margin-bottom:5px">Stelios Zerefos, Christos Tessas, <span style="text-decoration:underline">Iro Armeni</span>, Telesilla Bristogianni (2013) "Municipal Theatre of Corfu: Renovation of the facades and the entrance piazza", 7th Biennale of Young Architects, Exhibition at Benaki Museum, November 2012, Athens, GR</li>
-						<li style="margin-bottom:5px">Christos Tessas, Stelios Zerefos, <span style="text-decoration:underline">Iro Armeni</span>, Telesilla Bristogianni (2013) Housing Design Project 95 sq. m., Prototype Housing for the rehabilitation of the victims of the extended fires of August 2007, ETAEA, Hellenic Association of Consulting Firms, Bank of Greece Publications, January 2009, Athens, GR</li>
-                        </ul>
-				</div>
-			</div>
-	</section>
-
-
-
-
-<!-- jQuery --><script src="vendor/jquery/jquery.min.js"></script><!-- Bootstrap Core JavaScript --><script src="vendor/bootstrap/js/bootstrap.min.js"></script><!-- Plugin JavaScript --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><script src="vendor/scrollreveal/scrollreveal.min.js"></script><script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script><!-- Theme JavaScript --><script src="js/creative.min.js"></script></body>
+    <footer class="text-center text-xs py-6 text-gray-500">
+      © 2025 Iro Armeni. All rights reserved.
+    </footer>
+  </body>
 </html>
