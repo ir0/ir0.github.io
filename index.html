@@ -3,638 +3,819 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iro Armeni</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Iro Armeni | Gradient Spaces</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#141414',
+              mist: '#f7f3f1',
+              stone: '#f0e7e3',
+              accent: '#8c1515',
+              accent2: '#b31b1b',
+              accentsoft: '#f7eaea',
+              warm: '#d1b59d',
+            },
+            boxShadow: {
+              soft: '0 24px 60px rgba(20, 20, 20, 0.08)',
+            },
+          },
+        },
+      }
+    </script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
+        background: #f7f3f1;
       }
-      h1, h2, h3 {
+      h1, h2, h3, .display {
         font-family: 'Playfair Display', serif;
+      }
+      .hero-shell {
+        background:
+          linear-gradient(135deg, rgba(20,20,20,0.9), rgba(140,21,21,0.72)),
+          url('https://gradientspaces.stanford.edu/sites/g/files/sbiybj27761/files/styles/card_1900x950/public/media/image/group2_0.jpg?h=303d650b');
+        background-size: cover;
+        background-position: center;
+      }
+      .hero-portrait {
+        background-image: linear-gradient(135deg, rgba(20,20,20,0.18), rgba(20,20,20,0.18)), url('files/images/iro.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+      .image-card {
+        background-size: cover;
+        background-position: center;
+      }
+      .research-photo {
+        aspect-ratio: 16 / 9;
+        background-size: cover;
+        background-position: center;
+        background-color: #e8d8d2;
+      }
+      .publication-card p {
+        margin-top: 0.35rem;
+      }
+      .publication-card a { color: #8c1515; }
+      .publication-card a:hover { text-decoration: underline; }
+      .publication-highlight {
+        color: #8c1515;
+        font-weight: 700;
+        background: #f4d6d6;
+        border-radius: 0.2rem;
+        padding: 0 0.12em;
+        text-decoration: underline;
+        text-decoration-color: #8c1515;
+        text-decoration-thickness: 0.12em;
+        text-underline-offset: 0.12em;
+      }
+      .publication-archive summary {
+        cursor: pointer;
+        list-style: none;
+      }
+      .publication-archive summary::-webkit-details-marker {
+        display: none;
+      }
+      .publication-archive summary::after {
+        content: '+';
+        float: right;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+      .publication-archive[open] summary::after {
+        content: '−';
+      }
+      .soft-panel {
+        background: rgba(255,255,255,0.78);
+        border: 1px solid rgba(140,21,21,0.08);
       }
     </style>
   </head>
-  <body class="bg-white text-gray-800 leading-relaxed">
-    <!-- Navbar -->
-    <header class="sticky top-0 bg-white shadow z-10">
-      <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 class="text-xl font-bold tracking-tight">Iro Armeni</h1>
-        <ul class="flex space-x-4 text-sm font-medium">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#teaching" class="hover:text-blue-600">Teaching</a></li>
-          <li><a href="#publications" class="hover:text-blue-600">Publications</a></li>
-          <li><a href="#miscellaneous" class="hover:text-blue-600">Miscellaneous</a></li>
-          <li><a href="#datasets" class="hover:text-blue-600">Datasets</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
+  <body class="text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-red-100 bg-[#f7f3f1]/90 backdrop-blur-md">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <a href="#top" class="inline-flex items-center gap-3 text-lg font-semibold tracking-[0.08em] uppercase text-ink">
+            <img src="files/images/GradientSpacesLogo.png" alt="Gradient Spaces logo" class="h-8 w-auto" />
+            <span>Iro Armeni</span>
+          </a>
+        </div>
+        <div class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+          <a href="#about" class="transition hover:text-accent">About</a>
+          <a href="#teaching" class="transition hover:text-accent">Teaching</a>
+          <a href="#research" class="transition hover:text-accent">Research</a>
+          <a href="#publications" class="transition hover:text-accent">Publications</a>
+          <a href="#chapters" class="transition hover:text-accent">Books</a>
+          <a href="#miscellaneous" class="transition hover:text-accent">Miscellaneous</a>
+          <a href="#datasets" class="transition hover:text-accent">Datasets</a>
+          <a href="#contact" class="transition hover:text-accent">Contact</a>
+        </div>
       </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="bg-gray-100 py-20 px-6 text-center">
-      <div class="max-w-3xl mx-auto">
-        <img src="files/images/iro.jpeg" alt="Iro Armeni" class="w-40 mx-auto rounded-full mb-4">
-        <h2 class="text-3xl font-semibold mb-4">Assistant Professor, Stanford University</h2>
-        <p class="text-gray-700 text-lg"> I lead the <a href="https://gradientspaces.stanford.edu/" class="text-blue-600 underline">Gradient Spaces</a> group, researching at the intersection of Computer Vision, Generative AI, and the built environment. My work focuses on developing machine perception architectures and applications capable of designing, reconstructing, and predicting in adaptive physical and digital spaces. </p>
-        <img src="files/images/GradientSpacesLogo.png" style="width:50%;margin-left: 25%">
-      </div>
-    </section>
+    <main id="top">
+      <section class="hero-shell px-6 py-16 md:px-8 md:py-20">
+        <div class="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+          <div class="text-white">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-red-100">Stanford University</p>
+            <h1 class="display max-w-xl text-4xl leading-tight md:text-6xl">Designing adaptive spaces with computer vision, generative AI, and mixed reality.</h1>
+            <p class="mt-6 max-w-xl text-lg text-red-50">
+              I lead the <a href="https://gradientspaces.github.io" class="font-semibold underline decoration-red-100/80 underline-offset-4">Gradient Spaces</a> group, researching at the intersection of Computer Vision, Generative AI, and the built environment. My work focuses on developing machine perception architectures and applications capable of designing, reconstructing, and predicting in adaptive physical and digital spaces.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#research" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-accent transition hover:bg-red-50">Explore research</a>
+              <a href="#contact" class="rounded-full border border-white/40 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Contact</a>
+            </div>
+          </div>
 
-    <!-- About -->
-    <section id="about" class="py-16 px-6">
-      <div class="max-w-4xl mx-auto space-y-6 text-lg">
-        <h2 class="text-2xl font-semibold mb-4">About</h2>
-        <p>My area of focus is on developing quantitative and data-driven methods that learn from real-world visual data to generate, predict, and simulate new or renewed built environments that place the human in the center. My goal is to create sustainable, inclusive, and adaptive built environments that can support our current and future physical and digital needs.</p>
-        <p>I am intrigued by the idea of creating responsive spaces that blend from the 100% physical (real reality) to the 100% digital (virtual reality) and anything in between, with the use of Mixed Reality.</p>
-        <p>Read more in <a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe" class="text-blue-600 underline">A Day in the Life of an Architect in the Gradient World</a>.</p>
-
-     <!-- Education -->
-    <section id="about" class="bg-gray-100 py-16 px-6">
-      <div class="max-w-4xl mx-auto space-y-6 text-lg">
-        <h2 class="text-2xl font-semibold mb-4">Education</h2>
-        <ul class="text-sm space-y-4">
-	        <li class="text-sm"><strong>Postdoctoral Researcher (2023)</strong>, ETH Zurich, DBAUG and DINFK, <i>w/ Prof. Daniel Hall, Prof. Catherine de Wolf, and Prof. Marc Pollefeys</i></li>
-	        <li class="text-sm" style="margin:0px"><strong>Ph.D. (2020)</strong>, Civil and Environmental Engineering with Minor in Computer Science, Stanford University, <i>w/ Prof. Martin Fischer and Prof. Silvio Savarese</i></li>
-	        <li class="text-sm" style="margin:0px"><strong>MSc (2013)</strong>, Computer Science, Ionian University</li>
-	        <li class="text-sm" style="margin:0px"><strong>MEng (2011)</strong>, Architectural Engineering, University of Tokyo</li>
-	        <li class="text-sm" style="margin:0px"><strong>Diploma (2009)</strong>, Architectural Engineering, National Technical University of Athens</li>
-	        <li class="text-sm" style="margin:0px">Worked as an architect and consultant for both the private and public sector.</li>
-	    </ul>
-      </div>
-
-      <div class="max-w-4xl mx-auto space-y-6 text-lg" style="margin-top:20pt">
-        <h2 class="text-2xl font-semibold mb-4">Awards</h2>
-        <ul class="text-sm space-y-4">
-          <li class="text-sm"><strong>U. V. Helava Award - Best Paper 2025</strong>, ISPRS Journal of Photogrammetry and Remote Sensing journal-wide award for best paper in 2025</li>
-          <li class="text-sm" style="margin:0px"><strong>2026 BuiltWorlds Maverick Award on Influence and Education</strong>, Professional recognition for achievements in influence and education in the AEC industry from BuiltWorlds</li>
-          <li class="text-sm" style="margin:0px"><strong>NVIDIA Academic Grant Program (Jan-Jun 2026)</strong>, World-wide academic computing grant for research on "Multi-agent Video World Models"</li>
-          <li class="text-sm" style="margin:0px"><strong>Google Research Scholar Program (2025-26)</strong>, World-wide early-career faculty funding for research on Machine Perception</li>
-          <li class="text-sm" style="margin:0px"><strong>ETH Zurich Postdoctoral Fellowship (2020-22)</strong>, University-level funding for postdoctoral studies on Machine Perception for Architecture, Construction, and Facility Management</li>
-          <li class="text-sm" style="margin:0px"><strong>Google Ph.D. Fellowship (2017-20)</strong>, Competitive funding across North America and Europe, for Ph.D. studies on Machine Perception</li>
-          <li class="text-sm" style="margin:0px"><strong>Stanford CIFE Seed Research Award (2016-17)</strong>, Department-level funding, for research on "Automated Semantic Understanding of Buildings"</li>
-          <li class="text-sm" style="margin:0px"><strong>Stanford School of Engineering Fellowship, Rick & Melinda Reed Grad. Fellowship (2015-16)</strong>, University-level funding, for Ph.D. studies</li>
-          <li class="text-sm" style="margin:0px"><strong>EU Marie-Curie Fellowship (2014-15)</strong>, For the project "Automated As-Built Modelling of the Built Infrastructure"</li>
-          <li class="text-sm" style="margin:0px"><strong>EU Marie-Curie Fellowship (2013-14)</strong>, For the project "BIMAutoGen"</li>
-          <li class="text-sm" style="margin:0px"><strong>Japanese Government Scholarship (MEXT) (2009-11)</strong>, Competitive, nation-level funding, for MEng degree</li>
-          <li class="text-sm" style="margin:0px"><strong>Erasmus Scholarship (Jan-Jun 2007)</strong>, The State Scholarships Foundation, EU, University-level funding, foreign exchange studies in ETSAM, Spain</li>
-      </ul>
-      </div>
-    </section>
-
-    <!-- Current Teaching -->
-    <section id="teaching" class="py-16 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6">Current Teaching</h2>
-        <ul class="text-sm space-y-4">
-          <li><strong>Designing for Gradient Spaces</strong> — CEE342, Stanford, Spring [<a href="https://gradientspaces.stanford.edu/lectures/designing-gradient-spaces" class="text-blue-600 underline">Website</a>]</li>
-          <li><strong>Computer Vision for the Built Environment</strong> — CEE 247C, Stanford, Winter [<a href="https://gradientspaces.stanford.edu/computer-vision-built-environment" class="text-blue-600 underline">Website</a>]</li>
-          <li><strong>AI Applications in AEC</strong> — CEE 329, Stanford, Spring [<a href="https://gradientspaces.stanford.edu/lectures/AI4AEC" class="text-blue-600 underline">Website</a>]</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications" class="bg-gray-100 py-16 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6">Academic Publications</h2>
-        <div class="space-y-10">
-          <!-- World From Motion -->
-          <div>
-            <h3 class="text-lg font-semibold">World from Motion: Generative Dynamic Gaussian Reconstruction from Monocular Video</h3>
-            <p class="text-sm text-gray-700">Liyuan Zhu, Shengyu Huang, Amrita Mazumdar, Tianye Li, Zan Gojcic, Gordon Wetzstein, <strong>Iro Armeni</strong>, Shalini De Mello, Alex Trevithick</p>
-            <p class="text-sm text-gray-700">arXiv preprint</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2606.21646" class="text-blue-600 underline">PDF</a>
-              <a href="https://research.nvidia.com/labs/amri/projects/world-from-motion/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- CoPE-VideoLM -->
-          <div>
-            <h3 class="text-lg font-semibold">CoPE-VideoLM: Leveraging Codec Primitives For Efficient Video Language Modeling</h3>
-            <p class="text-sm text-gray-700">Sayan Deb Sarkar, Rémi Pautrat, Ondrej Miksik, Marc Pollefeys, <strong>Iro Armeni</strong>, Mahdi Rad, Mihai Dusmanu</p>
-            <p class="text-sm text-gray-700">arXiv preprint</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2602.13191" class="text-blue-600 underline">PDF</a>
-              <a href="https://microsoft.github.io/CoPE/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Street NVS -->
-          <div>
-            <h3 class="text-lg font-semibold">Effective Multi-sensor Conditioning for Street-view Novel-view Synthesis</h3>
-            <p class="text-sm text-gray-700">Zhengfei Kuang, Adam Sun, Liyuan Zhu, Tong Wu, Shengqu Cai, Jonathan Tremblay, <strong>Iro Armeni</strong>, Ehsan Adeli, Lior Yariv, Gordon Wetzstein</p>
-            <p class="text-sm text-gray-700">arXiv preprint</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2606.01590" class="text-blue-600 underline">PDF</a>
-              <a href="https://streetnvs.github.io/website/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- ECD -->
-          <div>
-            <h3 class="text-lg font-semibold">Energy-based Compositional Diffusion Planning</h3>
-            <p class="text-sm text-gray-700">Tao Sun, Utkarsh A. Mishra, Jiaxin Lu, Danfei Xu, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">ICML 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2606.21646" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Seismic Vulnerabilities VLM -->
-          <div>
-            <h3 class="text-lg font-semibold">Leveraging vision and language models to capture residential seismic vulnerabilities in the building inventory</h3>
-            <p class="text-sm text-gray-700">Mia Lochhead, <strong>Iro Armeni</strong>, and Gregory Deierlein</p>
-            <p class="text-sm text-gray-700">NCEE 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <!--a href="" class="text-blue-600 underline">PDF</a-->
-            </div>
-          </div>
-          <!-- Register Any Point -->
-          <div>
-            <h3 class="text-lg font-semibold">Register Any Point: Scaling 3D Point Cloud Registration by Flow Matching</h3>
-            <p class="text-sm text-gray-700">Yue Pan, Tao Sun, Liyuan Zhu, Lucas Nunes, <strong>Iro Armeni</strong>, Jens Behley, Cyrill Stachniss</p>
-            <p class="text-sm text-gray-700">ECCV 2026 <i>[Oral]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2512.01850" class="text-blue-600 underline">PDF</a>
-              <a href="https://register-any-point.github.io/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- ReScene4D -->
-          <div>
-            <h3 class="text-lg font-semibold">ReScene4D: Temporally Consistent Semantic Instance Segmentation of Evolving Indoor 3D Scenes</h3>
-            <p class="text-sm text-gray-700">Emily Steiner, Jianhao Zheng, Henry Howard-Jenkins, Chris Xie, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">CVPR 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2601.11508" class="text-blue-600 underline">PDF</a>
-              <a href="https://www.easteine.com/rescene4d/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- GaussFusion -->
-          <div>
-            <h3 class="text-lg font-semibold">Gaussfusion: Improving 3d reconstruction in the wild with geometry-informed video generator</h3>
-            <p class="text-sm text-gray-700">Liyuan Zhu, Manjunath Narayana, Michal Stary, Will Hutchcroft, Gordon Wetzstein, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">CVPR 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2603.25053" class="text-blue-600 underline">PDF</a>
-              <a href="http://research.zhuliyuan.net/projects/GaussFusion/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- WildPose -->
-          <div>
-            <h3 class="text-lg font-semibold">Wildpose: A unified framework for robust pose estimation in the wild</h3>
-            <p class="text-sm text-gray-700">Jianhao Zheng, Liyuan Zhu, Zihan Zhu, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">CVPR 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2605.12774" class="text-blue-600 underline">PDF</a>
-              <a href="https://wildpose.github.io/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- URBANAI -->
-          <div>
-            <h3 class="text-lg font-semibold">Urban-scale facade material mapping from street view images using vision–language models for circular construction planning</h3>
-            <p class="text-sm text-gray-700">Deepika Raghu, <strong>Iro Armeni</strong>, Catherine De Wolf</p>
-            <p class="text-sm text-gray-700">Scientific Reports Vol. 16, 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://www.nature.com/articles/s41598-026-51028-6" class="text-blue-600 underline">PDF</a>
-              <a href="https://raghudeepika.github.io/URBAN-AI/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Deep Sketch -->
-          <div>
-            <h3 class="text-lg font-semibold">Deep sketch-based 3dbmodeling: A survey</h3>
-            <p class="text-sm text-gray-700">Alberto Tono, Jiajun Wu, Gordon Wetzstein, <strong>Iro Armeni</strong>, Hariharan Subramonyam, James Landay, and Martin Fischer</p>
-            <p class="text-sm text-gray-700">Computer Graphics Forum 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2603.03287" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Do 3d large language models -->
-          <div>
-            <h3 class="text-lg font-semibold">Do 3d large language models really understand 3d spatial relationships?</h3>
-            <p class="text-sm text-gray-700">Xianzheng Ma, Tao Sun, Shuai Chen, Yash Bhalgat Sanjay, Jindong Gu, Angel X. Chang, <strong>Iro Armeni</strong>, Iro Laina, Songyou Peng, and Victor Adrian Prisacariu</p>
-            <p class="text-sm text-gray-700">ICLR 2026</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2603.23523" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Rectified Point Flow -->
-          <div>
-            <h3 class="text-lg font-semibold">Rectified Point Flow: Generic Point Cloud Pose Estimation</h3>
-            <p class="text-sm text-gray-700">Tao Sun*, Liyuan Zhu*, Shengyu Huang, Shuran Song, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">NeurIPS 2025 <i>[Spotlight]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2506.05282" class="text-blue-600 underline">PDF</a>
-              <a href="https://rectified-pointflow.github.io/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- GuideFlow3D -->
-          <div>
-            <h3 class="text-lg font-semibold">GuideFlow3D: Optimization-guided Rectified Flow for Appearance Transfer</h3>
-            <p class="text-sm text-gray-700">Sayan Deb Sarkar, Sinisa Stekovic, Vincent Lepetit, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">NeurIPS 2025</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2510.16136" class="text-blue-600 underline">PDF</a>
-              <a href="https://sayands.github.io/guideflow3d/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Facade Segmentation Solar PV -->
-          <div>
-            <h3 class="text-lg font-semibold">Facade Segmentation for Solar Photovoltaic Suitability</h3>
-            <p class="text-sm text-gray-700">Ayca Duran, Christoph Waibel, Bernd Bickel, <strong>Iro Armeni</strong>, Arno Schlueter</p>
-            <p class="text-sm text-gray-700">Tackling Climate Change with Machine Learning, Workshop in NeurIPS 2025</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2511.18882" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- HouseTour -->
-          <div>
-            <h3 class="text-lg font-semibold">HouseTour: A Virtual Real Estate A(I)gent</h3>
-            <p class="text-sm text-gray-700">Ata Celen, Marc Pollefeys, Daniel Bela Barath,, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">ICCV 2025</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2510.18054" class="text-blue-600 underline">PDF</a>
-              <a href="https://house-tour.github.io/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- ReSpace -->
-          <div>
-            <h3 class="text-lg font-semibold">ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment</h3>
-            <p class="text-sm text-gray-700">Martin JJ. Bucher, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">arXiv preprint</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2506.02459" class="text-blue-600 underline">PDF</a>
-              <a href="https://respace.mnbucher.com/" class="text-blue-600 underline">Website</a>
-              <a href="https://www.youtube.com/watch?v=2IMHWJqgDPg&ab_channel=GradientSpacesResearchGroup" class="text-blue-600 underline">Video</a>
-            </div>
-          </div>
-          <!-- ReStyle3D -->
-          <div>
-            <h3 class="text-lg font-semibold">ReStyle3D: Scene-level Appearance Transfer with Semantic Correspondences</h3>
-            <p class="text-sm text-gray-700">Liyuan Zhu, Shengqu Cai*, Shengyu Huang*, Gordon Wetzstein, Naji Khosravan, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">ACM SIGGRAPH 2025</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2502.10377" class="text-blue-600 underline">PDF</a>
-              <a href="https://restyle3d.github.io/" class="text-blue-600 underline">Website</a>
-              <a href="https://www.youtube.com/watch?v=93FkXriWv2w&ab_channel=GradientSpacesResearchGroup" class="text-blue-600 underline">Video</a>
-            </div>
-          </div>
-          <!-- WildGS-SLAM -->
-          <div>
-            <h3 class="text-lg font-semibold">WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments</h3>
-            <p class="text-sm text-gray-700">Jianhao Zheng*, Zihan Zhu*, Valentin Bieri, Marc Pollefeys, Songyou Peng, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">CVPR 2025</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2504.03886" class="text-blue-600 underline">PDF</a>
-              <a href="https://wildgs-slam.github.io/" class="text-blue-600 underline">Website</a>
-              <a href="https://www.youtube.com/watch?v=xXuolzFvddQ&t=11s&ab_channel=GradientSpacesResearchGroup" class="text-blue-600 underline">Video</a>
-            </div>
-          </div>
-          <!-- CrossOver -->
-          <div>
-            <h3 class="text-lg font-semibold">CrossOver: Scene Cross-Modal Alignment</h3>
-            <p class="text-sm text-gray-700">Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Dániel Barath, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">CVPR 2025 <i>[Highlight]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2502.15011" class="text-blue-600 underline">PDF</a>
-              <a href="https://sayands.github.io/crossover/" class="text-blue-600 underline">Website</a>
-              <a href="https://www.youtube.com/watch?v=8SEoQyaHuKs" class="text-blue-600 underline">Video</a>
-            </div>
-          </div>
-          <!-- LoopSplat -->
-          <div>
-            <h3 class="text-lg font-semibold">LoopSplat: Loop Closure by Registering 3D Gaussian Splats</h3>
-            <p class="text-sm text-gray-700">Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">3DV 2025 <i>[Oral Presentation]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2408.10154" class="text-blue-600 underline">PDF</a>
-              <a href="https://loopsplat.github.io/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Multi-Hexplanes -->
-          <div>
-            <h3 class="text-lg font-semibold">Multi-Hexplanes: A Lightweight Map Representation for Rendering and 3D Reconstruction</h3>
-            <p class="text-sm text-gray-700">Jianhao Zheng, Gabor Valasek, Daniel Barath, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">WACV 2025 <i>[Oral Presentation]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Zheng_Multi-HexPlanes_A_Lightweight_Map_Representation_for_Rendering_and_3D_Reconstruction_WACV_2025_paper.pdf"  class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- MAP-ADAPT -->
-          <div>
-            <h3 class="text-lg font-semibold">MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps</h3>
-            <p class="text-sm text-gray-700">Jianhao Zheng, Daniel Barath, Marc Pollefeys, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">ECCV 2024</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2406.05849"  class="text-blue-600 underline">PDF</a>
-              <a href="https://www.youtube.com/watch?v=MB2D2j-rJ8E&ab_channel=JianhaoZheng"  class="text-blue-600 underline">Video</a>
-              <a href="https://map-adapt.github.io/"  class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Where Am I? -->
-          <div>
-            <h3 class="text-lg font-semibold">"Where am I?" Scene Retrieval with Language</h3>
-            <p class="text-sm text-gray-700">Jiaqi Chen, Daniel Barath, <strong>Iro Armeni</strong>, Marc Pollefeys, Hermann Blum</p>
-            <p class="text-sm text-gray-700">ECCV 2024</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2404.02838"  class="text-blue-600 underline">PDF</a>
-              <a href="https://www.youtube.com/watch?v=Qx2Z3rPb5k0&feature=youtu.be"  class="text-blue-600 underline">Video</a>
-              <a href="https://atcelen.github.io/I-Design/"  class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- I-Design -->
-          <div>
-            <h3 class="text-lg font-semibold">I-Design: Personalized LLM Interior Designer</h3>
-            <p class="text-sm text-gray-700">Ata Çelen, Guo Han, Konrad Schindler, Luc Van Gool, <strong>Iro Armeni*</strong>, Anton Obukhov*, Xi Wang*</p>
-            <p class="text-sm text-gray-700">CV4Metaverse, Workshop in ECCV 2024</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2404.02838"  class="text-blue-600 underline">PDF</a>
-              <a href="https://www.youtube.com/watch?v=Qx2Z3rPb5k0&feature=youtu.be"  class="text-blue-600 underline">Video</a>
-              <a href="https://atcelen.github.io/I-Design/"  class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- NSS -->
-          <div>
-            <h3 class="text-lg font-semibold">Nothing Stands Still: A Spatiotemporal Benchmark on 3D Point Cloud Registration Under Large Geometric and Temporal Change</h3>
-            <p class="text-sm text-gray-700">Tao Sun, Yan Hao, Shengyu Huang, Silvio Savarese, Konrad Schindler, Marc Pollefeys, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">ISPRS Journal of Photogrammetry and Remote Sensing 2025 <i>[Best Paper]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2311.09346" class="text-blue-600 underline">PDF</a>
-              <a href="https://www.nothing-stands-still.com/"  class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Living Scenes -->
-          <div>
-            <h3 class="text-lg font-semibold">Living Scenes: Multi-object Relocalization and Reconstruction in Changing 3D Environments</h3>
-            <p class="text-sm text-gray-700">Liyuan Zhu, Shengyu Huang, Konrad Schindler, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">CVPR 2024 <i>[Highlight]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/abs/2312.09138" class="text-blue-600 underline">PDF</a>
-              <a href="https://www.youtube.com/watch?v=U4tCXFGDhWk&ab_channel=LiyuanZhu" class="text-blue-600 underline">Video</a>
-              <a href="https://www.zhuliyuan.net/livingscenes" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Multiway PC -->
-          <div>
-            <h3 class="text-lg font-semibold">Multiway Point Cloud Mosaicking with Diffusion and Global Optimization</h3>
-            <p class="text-sm text-gray-700">Shengze Jin, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
-            <p class="text-sm text-gray-700">CVPR 2024</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2404.00429" class="text-blue-600 underline">PDF</a>
-              <a href="https://www.youtube.com/watch?v=dnzhKfPIoWg&ab_channel=ShengzeJin" class="text-blue-600 underline">Video</a>
-            </div>
-          </div>
-          <!-- Semantically Guided Feature Matching for Visual SLAM -->
-          <div>
-            <h3 class="text-lg font-semibold">Semantically Guided Feature Matching for Visual SLAM</h3>
-            <p class="text-sm text-gray-700">Oguzhan Ilter, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
-            <p class="text-sm text-gray-700">ICRA 2024</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://ieeexplore.ieee.org/document/10610238" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Volumetric Semantically Consistent 3D Panoptic Mapping -->
-          <div>
-            <h3 class="text-lg font-semibold">Volumetric Semantically Consistent 3D Panoptic Mapping</h3>
-            <p class="text-sm text-gray-700">Yang Miao, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
-            <p class="text-sm text-gray-700">IROS 2024 <i>Oral Presentation</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://browse.arxiv.org/pdf/2309.14737.pdf" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- QReg -->
-          <div>
-            <h3 class="text-lg font-semibold">Q-REG: End-to-End Trainable Point Cloud Registration with Surface Curvature</h3>
-            <p class="text-sm text-gray-700">Shengze Jin, Daniel Barath, Marc Pollefeys, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">3DV 2024</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://browse.arxiv.org/pdf/2309.16023.pdf" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- SGAligner -->
-          <div>
-            <h3 class="text-lg font-semibold">SGAligner: 3D Scene Alignment with Scene Graphs</h3>
-            <p class="text-sm text-gray-700">Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Daniel Barath, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">ICCV 2023</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2304.14880.pdf" class="text-blue-600 underline">PDF</a>
-              <a href="https://sayandebsarkar.com/sgaligner" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- ARrow -->
-          <div>
-            <h3 class="text-lg font-semibold">ARrow: A Real-Time AR Rowing Coach</h3>
-            <p class="text-sm text-gray-700">Elena Iannuci, Zhu-Tian Chen, <strong>Iro Armeni</strong>, Marc Pollefeys, Hanspeter Pfister, Johanna Beyer</p>
-            <p class="text-sm text-gray-700">EuroVis 2023 <i>[Best Short Paper Honorable Mention Award]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="http://arxiv.org/abs/2305.02398" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Learning-Based Relational Object Matching Across Views -->
-          <div>
-            <h3 class="text-lg font-semibold">Learning-Based Relational Object Matching Across Views</h3>
-            <p class="text-sm text-gray-700">Cathrin Elich, <strong>Iro Armeni</strong>, Martin R. Oswald, Marc Pollefeys, Joerg Stueckler</p>
-            <p class="text-sm text-gray-700">ICRA 2023</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="http://arxiv.org/abs/2305.02398"  class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- HoloLabel -->
-          <div>
-            <h3 class="text-lg font-semibold">HoloLabel: Augmented Reality User-In-The-Loop Online Annotation Tool for As-Is Building Information</h3>
-            <p class="text-sm text-gray-700">Dhruv Agrawal*, Janik Lobsiger*, Jessica Bo, Véronique Kaufmann, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">EC3 2022</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://ec-3.org/publications/conferences/EC32022/papers/EC32022_174.pdf"  class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- SemSpray -->
-          <div>
-            <h3 class="text-lg font-semibold">SemSpray: Virtual Reality As-Is Semantic Information Labeling Tool for 3D Spatial Data</h3>
-            <p class="text-sm text-gray-700">Yiming Zhao*, Cyprien Fol*, Yuchang Jiang, Tianyu Wu, <strong>Iro Armeni</strong></p>
-            <p class="text-sm text-gray-700">EC3 2022</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://ec-3.org/publications/conferences/EC32022/papers/EC32022_175.pdf"  class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Implicity -->
-          <div>
-            <h3 class="text-lg font-semibold">ImpliCity: City Modeling From Satellite Images with Deep Implicit Occupancy Fields</h3>
-            <p class="text-sm text-gray-700">Corinne Stucker, Bingxin Ke, Yuanwen Yue, Shengyu Huang, <strong>Iro Armeni</strong>, Konrad Schindler</p>
-            <p class="text-sm text-gray-700">ISPRS Congress 2022 <i>[Best Young Author Award]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2201.09968.pdf"  class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Robust Policies -->
-          <div>
-            <h3 class="text-lg font-semibold">Robust Policies via Mid-Level Visual Representations: An Experimental Study in Manipulation and Navigation</h3>
-            <p class="text-sm text-gray-700">Bryan Chen*, Alexander Sax*, Gene Lewis, <strong>Iro Armeni</strong>, Silvio Savarese, Amir Zamir, Jitendra Malik, Lerrel Pinto</p>
-            <p class="text-sm text-gray-700">CoRL 2020</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/2011.06698.pdf"  class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- 3DSG -->
-          <div>
-            <h3 class="text-lg font-semibold">3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera</h3>
-            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Jerry Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese</p>
-            <p class="text-sm text-gray-700">ICCV 2019</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://3dscenegraph.stanford.edu/images/3DSceneGraph.pdf"  class="text-blue-600 underline">PDF</a>
-              <a href="https://3dscenegraph.stanford.edu/"  class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- SegCloud -->
-          <div>
-            <h3 class="text-lg font-semibold">SEGCloud: Semantic Segmentation of 3D Point Clouds</h3>
-            <p class="text-sm text-gray-700">Lyne P. Tchapmi, Christopher B. Choy, <strong>Iro Armeni</strong>, JunYoung Gwak, Silvio Savarese</p>
-            <p class="text-sm text-gray-700">3DV 2017 <i>[Spotlight Presentation]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://arxiv.org/pdf/1710.07563.pdf" class="text-blue-600 underline">PDF</a>
-              <a href="http://segcloud.stanford.edu" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- 2D-3D-S -->
-          <div>
-            <h3 class="text-lg font-semibold">Joint 2D-3D-Semantic Data for Indoor Scene Understanding</h3>
-            <p class="text-sm text-gray-700"><strong>Iro Armeni*</strong>, Alexander Sax*, Amir R. Zamir, Silvio Savarese</p>
-            <p class="text-sm text-gray-700">Technical Report 2017</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="http://buildingparser.stanford.edu/images/2D-3D-S_2017.pdf" class="text-blue-600 underline">PDF</a>
-              <a href="http://buildingparser.stanford.edu/dataset.html" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- Building Parser -->
-          <div>
-            <h3 class="text-lg font-semibold">3D Semantic Parsing of Large-Scale Indoor Spaces</h3>
-            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Ozan Sener, Amir R. Zamir, Helen Jiang, Ioannis Brilakis, Martin Fisher, Silvio Savarese</p>
-            <p class="text-sm text-gray-700">CVPR 2016 <i>[Oral Presentation]</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="http://buildingparser.stanford.edu/images/3D_Semantic_Parsing.pdf" class="text-blue-600 underline">PDF</a>
-              <a href="https://youtu.be/PB-Ach697Bc" class="text-blue-600 underline">Video</a>
-              <a href="http://buildingparser.stanford.edu/" class="text-blue-600 underline">Website</a>
-            </div>
-          </div>
-          <!-- State of Research in Automatic As-Built Modelling -->
-          <div>
-            <h3 class="text-lg font-semibold">State of Research in Automatic As-Built Modelling</h3>
-            <p class="text-sm text-gray-700">Viorica Pătrăucean,  <strong>Iro Armeni</strong>, Mohammad Nahangi, Jamie Yeung, Ioannis Brilakis, Carl Haas</p>
-            <p class="text-sm text-gray-700">Advanced Engineering Informatics 2015</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://www.sciencedirect.com/science/article/pii/S1474034615000026" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Dynamic Identification -->
-          <div>
-            <h3 class="text-lg font-semibold">A dynamic identification of a historical building using accelerometers with interface modules and a digital synchronization method</h3>
-            <p class="text-sm text-gray-700">Luigi Spedicato,  <strong>Iro Armeni</strong>, Nicola Ivan Giannoccaro, Markos Avlonitis, Sozon Papavlasopoulos</p>
-            <p class="text-sm text-gray-700">Periodical of Key Engineering Materials 2015</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://www.scientific.net/kem.628.204" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Pedestrian Navigation -->
-          <div>
-            <h3 class="text-lg font-semibold">Pedestrian navigation and shortest path: Preference versus distance</h3>
-            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Konstantinos Chorianopoulos</p>
-            <p class="text-sm text-gray-700">Workshop, International Conference on Intelligent Environments 2013</p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://ebooks.iospress.nl/doi/10.3233/978-1-61499-286-8-647" class="text-blue-600 underline">PDF</a>
-            </div>
-          </div>
-          <!-- Coderch -->
-          <div>
-            <h3 class="text-lg font-semibold">Resume of the thesis "More than a machine" J. A. Coderch</h3>
-            <p class="text-sm text-gray-700"><strong>Iro Armeni*</strong>, Telesilla Bristogianni*</p>
-            <p class="text-sm text-gray-700">Technical Chronicles, Technical Chamber of Greece 2020</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Books&Chapters -->
-    <section id="chapters" class="py-16 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6">Books & Chapters</h2>
-        <div class="space-y-10">
-          <!-- AI for Reuse -->
-          <div>
-            <h3 class="text-lg font-semibold">Artificial Intelligence for Predicting Reuse Patterns</h3>
-            <p class="text-sm text-gray-700"><strong>Iro Armeni</strong>, Deepika Raghu, Catherine De Wolf</p>
-            <p class="text-sm text-gray-700"><i>in "A Circular Built Environment in the Digital Age"</i></p>
-            <p class="text-sm text-gray-700">Eds. Catherine De Wolf, Sultan Çetin, Nancy Bocken</p>
-            <p class="text-sm text-gray-700"><i>Springer Nature</i></p>
-            <div class="space-x-4 text-sm mt-2">
-              <a href="https://link.springer.com/book/10.1007/978-3-031-39675-5" class="text-blue-600 underline">link</a>
+          <div class="mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-white/20 bg-white/7 p-3 shadow-soft">
+            <div class="hero-portrait h-[440px] w-full rounded-[1.5rem] border border-white/15"></div>
+            <div class="mt-4 rounded-2xl bg-white/10 px-4 py-3 text-sm text-red-50">
+              Research at the intersection of <span class="font-semibold text-white">computer vision</span>, <span class="font-semibold text-white">generative AI</span>, and <span class="font-semibold text-white">the built environment</span>.
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Miscellaneous -->
-    <section id="miscellaneous" class="py-16 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6">Miscellaneous</h2>
-        <div class="space-y-8 text-sm text-gray-700">
+      <section id="about" class="px-6 py-20 md:px-8">
+        <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <h3 class="text-lg font-semibold text-gray-900">Panel Discussion on Practical Applications of AI: On Construction</h3>
-            <p class="mt-1">Iro Armeni</p>
-            <p class="mt-1">12th Thessaloniki International Symposium in World Affairs: "Prometheus' dilemma: The applications of AI in everyday life."</p>
-            <div class="mt-2">
-              <a href="https://www.youtube.com/watch?v=fjrvROCjlCE&t=1961s" class="text-blue-600 underline">watch the discussion</a>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">About</p>
+            <h2 class="display text-4xl text-ink">Building intelligent systems for the spaces people inhabit.</h2>
+            <div class="mt-6 space-y-5 text-lg leading-8 text-slate-700">
+              <p>My area of focus is on developing quantitative and data-driven methods that learn from real-world visual data to generate, predict, and simulate new or renewed built environments that place the human in the center.</p>
+              <p>My goal is to create sustainable, inclusive, and adaptive built environments that can support our current and future physical and digital needs.</p>
+              <p>I am intrigued by the idea of creating responsive spaces that blend from the 100% physical (real reality) to the 100% digital (virtual reality) and anything in between, with the use of Mixed Reality.</p>
+              <p>Read more in <a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe" class="font-semibold text-accent underline-offset-2 hover:underline">A Day in the Life of an Architect in the Gradient World</a>.</p>
             </div>
           </div>
 
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900">Computer Vision and Mixed Reality in Architecture with Prof. Iro Armeni</h3>
-            <p class="mt-1">Circular Engineering for Architecture Podcast, 2024</p>
-            <div class="mt-2">
-              <a href="https://library-of-reuse.ch/podcast/2-iro-armeni" class="text-blue-600 underline">listen to the podcast</a>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900">A Day in the Life of an Architect in the Gradient World</h3>
-            <p class="mt-1">Short Story, 2023</p>
-            <p class="mt-1">Iro Armeni</p>
-            <div class="mt-2">
-              <a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe" class="text-blue-600 underline">read the story</a>
+          <div class="soft-panel rounded-[2rem] p-5 shadow-soft">
+            <img src="files/images/group_photo_2026.jpeg" alt="Gradient Spaces group" class="h-64 w-full rounded-[1.5rem] object-cover" />
+            <div class="mt-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Current focus</p>
+              <ul class="mt-4 space-y-3 text-sm text-slate-700">
+                <li>• Machine perception for built environments</li>
+                <li>• Generative AI for design and simulation</li>
+                <li>• Mixed reality and adaptive spaces</li>
+                <li>• Sustainable, inclusive spatial intelligence</li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Datasets -->
-    <section id="datasets" class="bg-gray-100 py-16 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-6">Datasets</h2>
-        <ul class="text-sm space-y-4">
-          <li><strong>HouseTour</strong>, 2025 [<a href="https://house-tour.github.io/" class="text-blue-600 underline">Website</a>]</li>
-          <li><strong>Nothing Stands Still (NSS)</strong>, 2024 [<a href="https://www.nothing-stands-still.com/" class="text-blue-600 underline">Website</a>]</li>
-          <li><strong>3D Scene Graph</strong>, 2019 [<a href="https://3dscenegraph.stanford.edu/" class="text-blue-600 underline">Website</a>]</li>
-          <li><strong>Stanford 2D-3D-Semantics Dataset (2D-3D-S)</strong>, 2017 [<a href="http://buildingparser.stanford.edu/dataset.html" class="text-blue-600 underline">Website</a>]</li>
-          <li><strong>Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS)</strong>, 2016 [<a href="http://buildingparser.stanford.edu/dataset.html" class="text-blue-600 underline">Website</a>]</li>
-        </ul>
-      </div>
-    </section>
+      <section class="bg-[#f0e7e3] px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-8">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Education & awards</p>
+            <h2 class="display text-4xl text-ink">Background and recognition</h2>
+          </div>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 px-6">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p class="text-sm mb-2">📧 <a href="mailto:iarmeni@stanford.edu" class="text-blue-600 underline">iarmeni@stanford.edu</a></p>
-        <p class="text-sm mb-2">📍 473 Via Ortega, Stanford, Room 233</p>
-        <div class="mt-4 flex justify-center space-x-6 text-gray-600">
-          <a href="https://scholar.google.com/citations?hl=en&user=m2oTZkIAAAAJ" class="text-sm hover:text-black">Google Scholar</a>
-          <a href="https://twitter.com/ir0armeni" class="text-sm hover:text-black">Twitter</a>
-          <a href="https://www.linkedin.com/in/iro-armeni-a4414861" class="text-sm hover:text-black">LinkedIn</a>
-          <a href="https://bsky.app/profile/ir0armeni.bsky.social" class="text-sm hover:text-black">BlueSky</a>
+          <div class="grid gap-6 lg:grid-cols-2">
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="display text-2xl text-ink">Education</h3>
+              <ul class="mt-5 space-y-4 text-sm text-slate-700">
+                <li><strong>Postdoctoral Researcher (2023)</strong>, ETH Zurich, DBAUG and DINFK, <i>w/ Prof. Daniel Hall, Prof. Catherine de Wolf, and Prof. Marc Pollefeys</i></li>
+                <li><strong>Ph.D. (2020)</strong>, Civil and Environmental Engineering with Minor in Computer Science, Stanford University, <i>w/ Prof. Martin Fischer and Prof. Silvio Savarese</i></li>
+                <li><strong>MSc (2013)</strong>, Computer Science, Ionian University</li>
+                <li><strong>MEng (2011)</strong>, Architectural Engineering, University of Tokyo</li>
+                <li><strong>Diploma (2009)</strong>, Architectural Engineering, National Technical University of Athens</li>
+                <li>Worked as an architect and consultant for both the private and public sector.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="display text-2xl text-ink">Awards</h3>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li><strong>U. V. Helava Award - Best Paper 2025</strong>, ISPRS Journal of Photogrammetry and Remote Sensing journal-wide award for best paper in 2025</li>
+                <li><strong>2026 BuiltWorlds Maverick Award on Influence and Education</strong>, Professional recognition for achievements in influence and education in the AEC industry from BuiltWorlds</li>
+                <li><strong>NVIDIA Academic Grant Program (Jan-Jun 2026)</strong>, World-wide academic computing grant for research on "Multi-agent Video World Models"</li>
+                <li><strong>Google Research Scholar Program (2025-26)</strong>, World-wide early-career faculty funding for research on Machine Perception</li>
+                <li><strong>ETH Zurich Postdoctoral Fellowship (2020-22)</strong>, University-level funding for postdoctoral studies on Machine Perception for Architecture, Construction, and Facility Management</li>
+                <li><strong>Google Ph.D. Fellowship (2017-20)</strong>, Competitive funding across North America and Europe, for Ph.D. studies on Machine Perception</li>
+                <li><strong>Stanford CIFE Seed Research Award (2016-17)</strong>, Department-level funding, for research on "Automated Semantic Understanding of Buildings"</li>
+                <li><strong>Japanese Government Scholarship (MEXT) (2009-11)</strong>, Competitive nation-level funding for MEng degree</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer class="text-center text-xs py-6 text-gray-500">
-      © 2026 Iro Armeni. All rights reserved.
+      <section id="teaching" class="px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Teaching</p>
+          <h2 class="display text-4xl text-ink">Current teaching</h2>
+          <div class="mt-8 space-y-4">
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft text-sm text-slate-700">
+              <strong>Designing for Gradient Spaces</strong> — CEE342, Stanford, Spring [<a href="https://gradientspaces.stanford.edu/lectures/designing-gradient-spaces" class="text-accent underline">Website</a>]
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft text-sm text-slate-700">
+              <strong>Computer Vision for the Built Environment</strong> — CEE 247C, Stanford, Winter [<a href="https://gradientspaces.stanford.edu/computer-vision-built-environment" class="text-accent underline">Website</a>]
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft text-sm text-slate-700">
+              <strong>AI Applications in AEC</strong> — CEE 329, Stanford, Spring [<a href="https://gradientspaces.stanford.edu/lectures/AI4AEC" class="text-accent underline">Website</a>]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="bg-[#f7f3f1] px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Research</p>
+          <h2 class="display text-4xl text-ink">Lab themes</h2>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <div class="research-photo" style="background-image: url('files/images/rescene4d.jpeg');"></div>
+              <div class="p-6">
+                <h3 class="display text-2xl text-ink">Spatial intelligence</h3>
+                <p class="mt-3 text-slate-700">Perception systems for understanding real-world spaces in 3D and 4D, with emphasis on semantic scene understanding and geometric reasoning.</p>
+              </div>
+            </article>
+            <article class="overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <video class="research-photo block w-full object-cover" autoplay muted loop playsinline preload="metadata" aria-label="ReSpace research video">
+                <source src="files/images/respace.mp4" type="video/mp4" />
+              </video>
+              <div class="p-6">
+                <h3 class="display text-2xl text-ink">Generative design</h3>
+                <p class="mt-3 text-slate-700">Learning models that synthesize and predict spaces, support planning, and reason over future built conditions.</p>
+              </div>
+            </article>
+            <article class="overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <div class="research-photo" style="background-image: url('files/images/crossover.gif');"></div>
+              <div class="p-6">
+                <h3 class="display text-2xl text-ink">Adaptive environments</h3>
+                <p class="mt-3 text-slate-700">Designing responsive, data-driven physical and digital spaces that support sustainability, resilience, and human-centered use.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="bg-[#f0e7e3] px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Publications</p>
+          <h2 class="display text-4xl text-ink">Academic publications</h2>
+
+          <div class="mt-8 max-w-2xl">
+            <label for="publication-search" class="text-sm font-semibold text-ink">Search publications</label>
+            <input id="publication-search" type="search" placeholder="Search by title, author, venue, year, or keyword" class="mt-2 w-full rounded-2xl border border-red-200 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-red-200" />
+            <p id="publication-search-status" class="mt-2 text-sm text-slate-600" aria-live="polite"></p>
+          </div>
+
+          <div class="publication-card mt-8 space-y-5">
+            <h3 id="publication-current-heading" class="display border-b border-red-200 pb-3 text-2xl text-ink">Current-year publications</h3>
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations</h3>
+              <p class="text-sm text-slate-600">Kevin Qu, Tao Sun, Massimiliano Viola, Liyuan Zhu, Zhizhuo Zhou, Sayan Deb Sarkar, Konrad Schindler, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">arXiv preprint 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm">
+                <a href="https://arxiv.org/abs/2609.20817">PDF</a>
+                <a href="https://kevinqu7.github.io/famos/">Website</a>
+              </div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">World from Motion: Generative Dynamic Gaussian Reconstruction from Monocular Video</h3>
+              <p class="text-sm text-slate-600">Liyuan Zhu, Shengyu Huang, Amrita Mazumdar, Tianye Li, Zan Gojcic, Gordon Wetzstein, <strong>Iro Armeni</strong>, Shalini De Mello, Alex Trevithick</p>
+              <p class="text-sm text-slate-600">NeurIPS 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm">
+                <a href="https://arxiv.org/abs/2607.01202">PDF</a>
+                <a href="https://research.nvidia.com/labs/amri/projects/world-from-motion/">Website</a>
+              </div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">GraphWrit3R: End-to-End Writing of Scene Graphs for Multi-Modal 3D Scenes</h3>
+              <p class="text-sm text-slate-600">Luka Milivojevic, Nikola Popovic, Sayan Deb Sarkar, Sebastian Koch, <strong>Iro Armeni</strong>, Luc Van Gool, Danda Pani Paudel</p>
+              <p class="text-sm text-slate-600">NeurIPS 2026</p>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">CoPE-VideoLM: Leveraging Codec Primitives For Efficient Video Language Modeling</h3>
+              <p class="text-sm text-slate-600">Sayan Deb Sarkar, Rémi Pautrat, Ondrej Miksik, Marc Pollefeys, <strong>Iro Armeni</strong>, Mahdi Rad, Mihai Dusmanu</p>
+              <p class="text-sm text-slate-600">NeurIPS 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2602.13191">PDF</a><a href="https://microsoft.github.io/CoPE/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Effective Multi-sensor Conditioning for Street-view Novel-view Synthesis</h3>
+              <p class="text-sm text-slate-600">Zhengfei Kuang, Adam Sun, Liyuan Zhu, Tong Wu, Shengqu Cai, Jonathan Tremblay, <strong>Iro Armeni</strong>, Ehsan Adeli, Lior Yariv, Gordon Wetzstein</p>
+              <p class="text-sm text-slate-600">NeurIPS 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2606.01590">PDF</a><a href="https://streetnvs.github.io/website/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Energy-based Compositional Diffusion Planning</h3>
+              <p class="text-sm text-slate-600">Tao Sun, Utkarsh A. Mishra, Jiaxin Lu, Danfei Xu, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">ICML 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2606.21646">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Leveraging vision and language models to capture residential seismic vulnerabilities in the building inventory</h3>
+              <p class="text-sm text-slate-600">Mia Lochhead, <strong>Iro Armeni</strong>, and Gregory Deierlein</p>
+              <p class="text-sm text-slate-600">NCEE 2026</p>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Register Any Point: Scaling 3D Point Cloud Registration by Flow Matching</h3>
+              <p class="text-sm text-slate-600">Yue Pan, Tao Sun, Liyuan Zhu, Lucas Nunes, <strong>Iro Armeni</strong>, Jens Behley, Cyrill Stachniss</p>
+              <p class="text-sm text-slate-600">ECCV 2026 <i>[Oral, Best Paper Candidate Award]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2512.01850">PDF</a><a href="https://register-any-point.github.io/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">ReScene4D: Temporally Consistent Semantic Instance Segmentation of Evolving Indoor 3D Scenes</h3>
+              <p class="text-sm text-slate-600">Emily Steiner, Jianhao Zheng, Henry Howard-Jenkins, Chris Xie, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">CVPR 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2601.11508">PDF</a><a href="https://www.easteine.com/rescene4d/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">GaussFusion: Improving 3D Reconstruction in the Wild with Geometry-Informed Video Generators</h3>
+              <p class="text-sm text-slate-600">Liyuan Zhu, Manjunath Narayana, Michal Stary, Will Hutchcroft, Gordon Wetzstein, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">CVPR 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2603.25053">PDF</a><a href="http://research.zhuliyuan.net/projects/GaussFusion/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">WildPose: A Unified Framework for Robust Pose Estimation in the Wild</h3>
+              <p class="text-sm text-slate-600">Jianhao Zheng, Liyuan Zhu, Zihan Zhu, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">CVPR 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2605.12774">PDF</a><a href="https://wildpose.github.io/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Urban-scale Facade Material Mapping from Street View Images Using Vision–Language Models for Circular Construction Planning</h3>
+              <p class="text-sm text-slate-600">Deepika Raghu, <strong>Iro Armeni</strong>, Catherine De Wolf</p>
+              <p class="text-sm text-slate-600">Scientific Reports Vol. 16, 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://www.nature.com/articles/s41598-026-51028-6">PDF</a><a href="https://raghudeepika.github.io/URBAN-AI/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Deep Sketch-Based 3D Modeling: A Survey</h3>
+              <p class="text-sm text-slate-600">Alberto Tono, Jiajun Wu, Gordon Wetzstein, <strong>Iro Armeni</strong>, Hariharan Subramonyam, James Landay, and Martin Fischer</p>
+              <p class="text-sm text-slate-600">Computer Graphics Forum 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.70302">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Do 3D Large Language Models Really Understand 3D Spatial Relationships?</h3>
+              <p class="text-sm text-slate-600">Xianzheng Ma, Tao Sun, Shuai Chen, Yash Bhalgat Sanjay, Jindong Gu, Angel X. Chang, <strong>Iro Armeni</strong>, Iro Laina, Songyou Peng, and Victor Adrian Prisacariu</p>
+              <p class="text-sm text-slate-600">ICLR 2026</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/3739050312e637d158e39a2859fa8b01-Abstract-Conference.html">PDF</a><a href="https://real-3dqa.github.io/">Website</a></div>
+            </article>
+
+            <details class="publication-archive rounded-[2rem] border border-red-200 bg-white/60 p-5">
+              <summary class="text-lg font-semibold text-accent">Show earlier publications</summary>
+              <div class="mt-5 space-y-5">
+                <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+                  <h3 class="text-xl font-semibold text-ink">ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment</h3>
+                  <p class="text-sm text-slate-600">Martin JJ. Bucher, <strong>Iro Armeni</strong></p>
+                  <p class="text-sm text-slate-600">arXiv preprint 2025</p>
+                  <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2506.02459">PDF</a><a href="https://respace.mnbucher.com/">Website</a><a href="https://www.youtube.com/watch?v=2IMHWJqgDPg&ab_channel=GradientSpacesResearchGroup">Video</a></div>
+                </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">SGAligner++: Cross-Modal Language-Aided 3D Scene Graph Alignment</h3>
+              <p class="text-sm text-slate-600">Binod Singh*, Sayan Deb Sarkar*, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">arXiv preprint</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2509.20401">PDF</a><a href="https://singhbino3d.github.io/sgpp/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Rectified Point Flow: Generic Point Cloud Pose Estimation</h3>
+              <p class="text-sm text-slate-600">Tao Sun*, Liyuan Zhu*, Shengyu Huang, Shuran Song, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">NeurIPS 2025 <i>[Spotlight]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2506.05282">PDF</a><a href="https://rectified-pointflow.github.io/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">GuideFlow3D: Optimization-guided Rectified Flow for Appearance Transfer</h3>
+              <p class="text-sm text-slate-600">Sayan Deb Sarkar, Sinisa Stekovic, Vincent Lepetit, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">NeurIPS 2025</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2510.16136">PDF</a><a href="https://sayands.github.io/guideflow3d/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Facade Segmentation for Solar Photovoltaic Suitability</h3>
+              <p class="text-sm text-slate-600">Ayca Duran, Christoph Waibel, Bernd Bickel, <strong>Iro Armeni</strong>, Arno Schlueter</p>
+              <p class="text-sm text-slate-600">Tackling Climate Change with Machine Learning, Workshop in NeurIPS 2025</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2511.18882">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">HouseTour: A Virtual Real Estate A(I)gent</h3>
+              <p class="text-sm text-slate-600">Ata Celen, Marc Pollefeys, Daniel Bela Barath, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">ICCV 2025</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2510.18054">PDF</a><a href="https://house-tour.github.io/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">ReStyle3D: Scene-level Appearance Transfer with Semantic Correspondences</h3>
+              <p class="text-sm text-slate-600">Liyuan Zhu, Shengqu Cai*, Shengyu Huang*, Gordon Wetzstein, Naji Khosravan, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">ACM SIGGRAPH 2025</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2502.10377">PDF</a><a href="https://restyle3d.github.io/">Website</a><a href="https://www.youtube.com/watch?v=93FkXriWv2w&ab_channel=GradientSpacesResearchGroup">Video</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments</h3>
+              <p class="text-sm text-slate-600">Jianhao Zheng*, Zihan Zhu*, Valentin Bieri, Marc Pollefeys, Songyou Peng, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">CVPR 2025</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2504.03886">PDF</a><a href="https://wildgs-slam.github.io/">Website</a><a href="https://www.youtube.com/watch?v=xXuolzFvddQ&t=11s&ab_channel=GradientSpacesResearchGroup">Video</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">CrossOver: Scene Cross-Modal Alignment</h3>
+              <p class="text-sm text-slate-600">Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Dániel Barath, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">CVPR 2025 <i>[Highlight]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2502.15011">PDF</a><a href="https://sayands.github.io/crossover/">Website</a><a href="https://www.youtube.com/watch?v=8SEoQyaHuKs">Video</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">LoopSplat: Loop Closure by Registering 3D Gaussian Splats</h3>
+              <p class="text-sm text-slate-600">Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">3DV 2025 <i>[Oral Presentation]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2408.10154">PDF</a><a href="https://loopsplat.github.io/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Multi-Hexplanes: A Lightweight Map Representation for Rendering and 3D Reconstruction</h3>
+              <p class="text-sm text-slate-600">Jianhao Zheng, Gabor Valasek, Daniel Barath, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">WACV 2025 <i>[Oral Presentation]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://openaccess.thecvf.com/content/WACV2025/papers/Zheng_Multi-HexPlanes_A_Lightweight_Map_Representation_for_Rendering_and_3D_Reconstruction_WACV_2025_paper.pdf">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps</h3>
+              <p class="text-sm text-slate-600">Jianhao Zheng, Daniel Barath, Marc Pollefeys, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">ECCV 2024</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2406.05849">PDF</a><a href="https://www.youtube.com/watch?v=MB2D2j-rJ8E&ab_channel=JianhaoZheng">Video</a><a href="https://map-adapt.github.io/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">"Where am I?" Scene Retrieval with Language</h3>
+              <p class="text-sm text-slate-600">Jiaqi Chen, Daniel Barath, <strong>Iro Armeni</strong>, Marc Pollefeys, Hermann Blum</p>
+              <p class="text-sm text-slate-600">ECCV 2024</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2404.14565">PDF</a><a href="https://whereami-langloc.github.io/">Website</a><a href="https://github.com/jiaqchen/whereami-text2sgm">Code</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">I-Design: Personalized LLM Interior Designer</h3>
+              <p class="text-sm text-slate-600">Ata Çelen, Guo Han, Konrad Schindler, Luc Van Gool, <strong>Iro Armeni*</strong>, Anton Obukhov*, Xi Wang*</p>
+              <p class="text-sm text-slate-600">CV4Metaverse, Workshop in ECCV 2024</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2404.02838">PDF</a><a href="https://atcelen.github.io/I-Design/">Website</a><a href="https://github.com/atcelen/IDesign/">Code</a><a href="https://youtu.be/Qx2Z3rPb5k0">Video</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Nothing Stands Still: A Spatiotemporal Benchmark on 3D Point Cloud Registration Under Large Geometric and Temporal Change</h3>
+              <p class="text-sm text-slate-600">Tao Sun, Yan Hao, Shengyu Huang, Silvio Savarese, Konrad Schindler, Marc Pollefeys, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">ISPRS Journal of Photogrammetry and Remote Sensing 2025 <i>[Best Paper]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2311.09346">PDF</a><a href="https://www.nothing-stands-still.com/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Living Scenes: Multi-object Relocalization and Reconstruction in Changing 3D Environments</h3>
+              <p class="text-sm text-slate-600">Liyuan Zhu, Shengyu Huang, Konrad Schindler, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">CVPR 2024 <i>[Highlight]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2312.09138">PDF</a><a href="https://www.youtube.com/watch?v=U4tCXFGDhWk&ab_channel=LiyuanZhu">Video</a><a href="https://www.zhuliyuan.net/livingscenes">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Multiway Point Cloud Mosaicking with Diffusion and Global Optimization</h3>
+              <p class="text-sm text-slate-600">Shengze Jin, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
+              <p class="text-sm text-slate-600">CVPR 2024</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2404.00429">PDF</a><a href="https://www.youtube.com/watch?v=dnzhKfPIoWg&ab_channel=ShengzeJin">Video</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Semantically Guided Feature Matching for Visual SLAM</h3>
+              <p class="text-sm text-slate-600">Oguzhan Ilter, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
+              <p class="text-sm text-slate-600">ICRA 2024</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://ieeexplore.ieee.org/document/10610238">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Volumetric Semantically Consistent 3D Panoptic Mapping</h3>
+              <p class="text-sm text-slate-600">Yang Miao, <strong>Iro Armeni</strong>, Marc Pollefeys, Daniel Barath</p>
+              <p class="text-sm text-slate-600">IROS 2024 <i>Oral Presentation</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2309.14737">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Q-REG: End-to-End Trainable Point Cloud Registration with Surface Curvature</h3>
+              <p class="text-sm text-slate-600">Shengze Jin, Daniel Barath, Marc Pollefeys, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">3DV 2024</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/abs/2309.16023">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">SGAligner: 3D Scene Alignment with Scene Graphs</h3>
+              <p class="text-sm text-slate-600">Sayan Deb Sarkar, Ondrej Miksik, Marc Pollefeys, Daniel Barath, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">ICCV 2023</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2304.14880.pdf">PDF</a><a href="https://sayandebsarkar.com/sgaligner">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">ARrow: A Real-Time AR Rowing Coach</h3>
+              <p class="text-sm text-slate-600">Elena Iannuci, Zhu-Tian Chen, <strong>Iro Armeni</strong>, Marc Pollefeys, Hanspeter Pfister, Johanna Beyer</p>
+              <p class="text-sm text-slate-600">EuroVis 2023 <i>[Best Short Paper Honorable Mention Award]</i></p>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Learning-Based Relational Object Matching Across Views</h3>
+              <p class="text-sm text-slate-600">Cathrin Elich, <strong>Iro Armeni</strong>, Martin R. Oswald, Marc Pollefeys, Joerg Stueckler</p>
+              <p class="text-sm text-slate-600">ICRA 2023</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="http://arxiv.org/abs/2305.02398">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">HoloLabel: Augmented Reality User-In-The-Loop Online Annotation Tool for As-Is Building Information</h3>
+              <p class="text-sm text-slate-600">Dhruv Agrawal*, Janik Lobsiger*, Jessica Bo, Véronique Kaufmann, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">EC3 2022</p>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">SemSpray: Virtual Reality As-Is Semantic Information Labeling Tool for 3D Spatial Data</h3>
+              <p class="text-sm text-slate-600">Yiming Zhao*, Cyprien Fol*, Yuchang Jiang, Tianyu Wu, <strong>Iro Armeni</strong></p>
+              <p class="text-sm text-slate-600">EC3 2022</p>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">ImpliCity: City Modeling From Satellite Images with Deep Implicit Occupancy Fields</h3>
+              <p class="text-sm text-slate-600">Corinne Stucker, Bingxin Ke, Yuanwen Yue, Shengyu Huang, <strong>Iro Armeni</strong>, Konrad Schindler</p>
+              <p class="text-sm text-slate-600">ISPRS Congress 2022 <i>[Best Young Author Award]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2201.09968.pdf">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Robust Policies via Mid-Level Visual Representations: An Experimental Study in Manipulation and Navigation</h3>
+              <p class="text-sm text-slate-600">Bryan Chen*, Alexander Sax*, Gene Lewis, <strong>Iro Armeni</strong>, Silvio Savarese, Amir Zamir, Jitendra Malik, Lerrel Pinto</p>
+              <p class="text-sm text-slate-600">CoRL 2020</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/2011.06698.pdf">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera</h3>
+              <p class="text-sm text-slate-600"><strong>Iro Armeni</strong>, Jerry Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese</p>
+              <p class="text-sm text-slate-600">ICCV 2019</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://3dscenegraph.stanford.edu/images/3DSceneGraph.pdf">PDF</a><a href="https://3dscenegraph.stanford.edu/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">SEGCloud: Semantic Segmentation of 3D Point Clouds</h3>
+              <p class="text-sm text-slate-600">Lyne P. Tchapmi, Christopher B. Choy, <strong>Iro Armeni</strong>, JunYoung Gwak, Silvio Savarese</p>
+              <p class="text-sm text-slate-600">3DV 2017 <i>[Spotlight Presentation]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://arxiv.org/pdf/1710.07563.pdf">PDF</a><a href="http://segcloud.stanford.edu">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Joint 2D-3D-Semantic Data for Indoor Scene Understanding</h3>
+              <p class="text-sm text-slate-600"><strong>Iro Armeni*</strong>, Alexander Sax*, Amir R. Zamir, Silvio Savarese</p>
+              <p class="text-sm text-slate-600">Technical Report 2017</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="http://buildingparser.stanford.edu/images/2D-3D-S_2017.pdf">PDF</a><a href="http://buildingparser.stanford.edu/dataset.html">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">3D Semantic Parsing of Large-Scale Indoor Spaces</h3>
+              <p class="text-sm text-slate-600"><strong>Iro Armeni</strong>, Ozan Sener, Amir R. Zamir, Helen Jiang, Ioannis Brilakis, Martin Fisher, Silvio Savarese</p>
+              <p class="text-sm text-slate-600">CVPR 2016 <i>[Oral Presentation]</i></p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="http://buildingparser.stanford.edu/images/3D_Semantic_Parsing.pdf">PDF</a><a href="https://youtu.be/PB-Ach697Bc">Video</a><a href="http://buildingparser.stanford.edu/">Website</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">State of Research in Automatic As-Built Modelling</h3>
+              <p class="text-sm text-slate-600">Viorica Pătrăucean, <strong>Iro Armeni</strong>, Mohammad Nahangi, Jamie Yeung, Ioannis Brilakis, Carl Haas</p>
+              <p class="text-sm text-slate-600">Advanced Engineering Informatics 2015</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://www.sciencedirect.com/science/article/pii/S1474034615000026">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">A dynamic identification of a historical building using accelerometers with interface modules and a digital synchronization method</h3>
+              <p class="text-sm text-slate-600">Luigi Spedicato, <strong>Iro Armeni</strong>, Nicola Ivan Giannoccaro, Markos Avlonitis, Sozon Papavlasopoulos</p>
+              <p class="text-sm text-slate-600">Periodical of Key Engineering Materials 2015</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://www.scientific.net/kem.628.204">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Pedestrian navigation and shortest path: Preference versus distance</h3>
+              <p class="text-sm text-slate-600"><strong>Iro Armeni</strong>, Konstantinos Chorianopoulos</p>
+              <p class="text-sm text-slate-600">Workshop, International Conference on Intelligent Environments 2013</p>
+              <div class="mt-3 flex flex-wrap gap-4 text-sm"><a href="https://ebooks.iospress.nl/doi/10.3233/978-1-61499-286-8-647">PDF</a></div>
+            </article>
+
+            <article class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-ink">Resume of the thesis "More than a machine" J. A. Coderch</h3>
+              <p class="text-sm text-slate-600"><strong>Iro Armeni*</strong>, Telesilla Bristogianni*</p>
+              <p class="text-sm text-slate-600">Technical Chronicles, Technical Chamber of Greece 2020</p>
+            </article>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="chapters" class="px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Books & chapters</p>
+          <h2 class="display text-4xl text-ink">Books and chapters</h2>
+          <div class="mt-8 rounded-[2rem] bg-white p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-ink">Artificial Intelligence for Predicting Reuse Patterns</h3>
+            <p class="mt-2 text-sm text-slate-600"><strong>Iro Armeni</strong>, Deepika Raghu, Catherine De Wolf</p>
+            <p class="text-sm text-slate-600"><i>in "A Circular Built Environment in the Digital Age"</i></p>
+            <p class="text-sm text-slate-600">Eds. Catherine De Wolf, Sultan Çetin, Nancy Bocken</p>
+            <p class="text-sm text-slate-600"><i>Springer Nature</i></p>
+            <div class="mt-3 text-sm"><a href="https://link.springer.com/book/10.1007/978-3-031-39675-5" class="text-accent underline">link</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="miscellaneous" class="bg-[#f7f3f1] px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Miscellaneous</p>
+          <h2 class="display text-4xl text-ink">Selected conversations and stories</h2>
+          <div class="mt-8 grid gap-6 md:grid-cols-3">
+            <article class="flex h-full flex-col rounded-[2rem] bg-white p-6 shadow-soft">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Panel discussion</p>
+              <h3 class="mt-3 text-xl font-semibold text-ink">Panel Discussion on Practical Applications of AI: On Construction</h3>
+              <p class="mt-3 text-sm text-slate-700">Iro Armeni</p>
+              <p class="mt-2 text-sm text-slate-700">12th Thessaloniki International Symposium in World Affairs: "Prometheus' dilemma: The applications of AI in everyday life."</p>
+              <a href="https://www.youtube.com/watch?v=fjrvROCjlCE&t=1961s" class="mt-auto pt-5 text-sm font-semibold text-accent underline-offset-2 hover:underline">watch the discussion</a>
+            </article>
+
+            <article class="flex h-full flex-col rounded-[2rem] bg-white p-6 shadow-soft">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Podcast</p>
+              <h3 class="mt-3 text-xl font-semibold text-ink">Computer Vision and Mixed Reality in Architecture with Prof. Iro Armeni</h3>
+              <p class="mt-3 text-sm text-slate-700">Circular Engineering for Architecture Podcast, 2024</p>
+              <a href="https://library-of-reuse.ch/podcast/2-iro-armeni" class="mt-auto pt-5 text-sm font-semibold text-accent underline-offset-2 hover:underline">listen to the podcast</a>
+            </article>
+
+            <article class="flex h-full flex-col rounded-[2rem] bg-white p-6 shadow-soft">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Short story</p>
+              <h3 class="mt-3 text-xl font-semibold text-ink">A Day in the Life of an Architect in the Gradient World</h3>
+              <p class="mt-3 text-sm text-slate-700">Short Story, 2023</p>
+              <p class="mt-2 text-sm text-slate-700">Iro Armeni</p>
+              <a href="https://medium.com/@iroarmeni/a-day-in-the-life-of-an-architect-in-the-gradient-world-70c1996710fe" class="mt-auto pt-5 text-sm font-semibold text-accent underline-offset-2 hover:underline">read the story</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="datasets" class="bg-[#f0e7e3] px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">Datasets</p>
+          <h2 class="display text-4xl text-ink">Open data and resources</h2>
+          <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <strong>HouseTour</strong>, 2025
+              <p class="mt-3 text-sm leading-6 text-slate-600">Over 1,200 house-tour videos with camera poses, 3D reconstructions, and real estate descriptions.</p>
+              <a href="https://house-tour.github.io/" class="mt-4 inline-block text-sm text-accent underline">Website</a>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <strong>Nothing Stands Still (NSS)</strong>, 2024
+              <p class="mt-3 text-sm leading-6 text-slate-600">3D point clouds from 6 large indoor building areas under construction or renovation, across 27 temporal stages.</p>
+              <a href="https://www.nothing-stands-still.com/" class="mt-4 inline-block text-sm text-accent underline">Website</a>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <strong>3D Scene Graph</strong>, 2019
+              <p class="mt-3 text-sm leading-6 text-slate-600">Semantic annotations for Gibson environment models, including 3D/2D segmentations and object, room, and camera relationships.</p>
+              <a href="https://3dscenegraph.stanford.edu/" class="mt-4 inline-block text-sm text-accent underline">Website</a>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <strong>Stanford 2D-3D-Semantics Dataset (2D-3D-S)</strong>, 2017
+              <p class="mt-3 text-sm leading-6 text-slate-600">Registered RGB, depth, surface normal, and semantic annotations across 6,000+ m² of indoor space, with 3D meshes and point clouds.</p>
+              <a href="http://buildingparser.stanford.edu/dataset.html" class="mt-4 inline-block text-sm text-accent underline">Website</a>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft">
+              <strong>Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS)</strong>, 2016
+              <p class="mt-3 text-sm leading-6 text-slate-600">Point clouds of six large-scale indoor areas across three buildings, annotated with 12 building-element classes plus clutter.</p>
+              <a href="http://buildingparser.stanford.edu/dataset.html" class="mt-4 inline-block text-sm text-accent underline">Website</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="px-6 py-20 md:px-8">
+        <div class="mx-auto max-w-6xl rounded-[2rem] bg-[#8c1515] px-8 py-8 text-center text-white shadow-soft md:py-10">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-red-100">Contact</p>
+          <h2 class="display mt-3 text-3xl leading-tight">Open to collaborations, research, and conversations.</h2>
+          <p class="mt-4 text-red-50">Email: <a href="mailto:iarmeni@stanford.edu" class="font-semibold text-white underline-offset-2 hover:underline">iarmeni@stanford.edu</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-red-100 bg-[#f7f3f1] px-6 py-8 text-center text-sm text-slate-600">
+      © 2026 Iro Armeni
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const publicationList = document.querySelector('.publication-card');
+        const archive = publicationList?.querySelector('.publication-archive');
+        const archiveContent = archive?.querySelector(':scope > div');
+        const heading = document.querySelector('#publication-current-heading');
+        const search = document.querySelector('#publication-search');
+        const searchStatus = document.querySelector('#publication-search-status');
+
+        if (!publicationList || !archive || !archiveContent || !heading || !search || !searchStatus) return;
+
+        const currentYear = new Date().getFullYear();
+        const currentPublications = document.createElement('div');
+        currentPublications.className = 'space-y-5';
+        currentPublications.id = 'publication-current-list';
+
+        const publications = [...publicationList.querySelectorAll('article')];
+        const originalPublicationMarkup = new Map(publications.map((publication) => [publication, publication.innerHTML]));
+        publications.forEach((publication) => {
+          const years = [...publication.textContent.matchAll(/\b20\d{2}\b/g)].map(([year]) => Number(year));
+          const publicationYear = years.length ? Math.max(...years) : 0;
+
+          if (publicationYear === currentYear) {
+            currentPublications.appendChild(publication);
+          } else {
+            archiveContent.appendChild(publication);
+          }
+        });
+
+        heading.textContent = `${currentYear} publications`;
+        archive.querySelector('summary').textContent = `Show earlier publications (${publications.length - currentPublications.children.length})`;
+        publicationList.insertBefore(currentPublications, archive);
+
+        const restorePublicationMarkup = () => {
+          publications.forEach((publication) => {
+            publication.innerHTML = originalPublicationMarkup.get(publication);
+          });
+        };
+
+        const highlightMatches = (query) => {
+          if (!query) return;
+
+          const terms = query.split(/\s+/).filter(Boolean).sort((first, second) => second.length - first.length);
+          if (!terms.length) return;
+
+          const pattern = new RegExp(`(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+          publications.forEach((publication) => {
+            const walker = document.createTreeWalker(publication, NodeFilter.SHOW_TEXT);
+            const textNodes = [];
+            let node;
+            while ((node = walker.nextNode())) {
+              if (node.parentElement?.closest('.publication-highlight')) continue;
+              if (pattern.test(node.nodeValue)) textNodes.push(node);
+              pattern.lastIndex = 0;
+            }
+
+            textNodes.forEach((textNode) => {
+              const fragment = document.createDocumentFragment();
+              let lastIndex = 0;
+              textNode.nodeValue.replace(pattern, (match, _group, offset) => {
+                fragment.appendChild(document.createTextNode(textNode.nodeValue.slice(lastIndex, offset)));
+                const highlight = document.createElement('mark');
+                highlight.className = 'publication-highlight';
+                highlight.textContent = match;
+                fragment.appendChild(highlight);
+                lastIndex = offset + match.length;
+                return match;
+              });
+              fragment.appendChild(document.createTextNode(textNode.nodeValue.slice(lastIndex)));
+              textNode.replaceWith(fragment);
+              pattern.lastIndex = 0;
+            });
+          });
+        };
+
+        const filterPublications = () => {
+          const query = search.value.trim().toLowerCase();
+          const searchTerms = query.split(/\s+/).filter(Boolean);
+          let matches = 0;
+          let archivedMatch = false;
+
+          restorePublicationMarkup();
+          publications.forEach((publication) => {
+            const publicationText = publication.textContent.toLowerCase();
+            const isMatch = !query || searchTerms.every((term) => publicationText.includes(term));
+            publication.hidden = !isMatch;
+            if (isMatch) {
+              matches += 1;
+              if (archiveContent.contains(publication)) archivedMatch = true;
+            }
+          });
+
+          if (query && archivedMatch) archive.open = true;
+          if (!query) archive.open = false;
+          highlightMatches(query);
+          searchStatus.textContent = query ? `${matches} publication${matches === 1 ? '' : 's'} found` : `${publications.length} publications`;
+        };
+
+        search.addEventListener('input', filterPublications);
+        filterPublications();
+      });
+    </script>
   </body>
 </html>
